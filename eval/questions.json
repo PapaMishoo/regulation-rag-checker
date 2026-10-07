@@ -1,0 +1,38 @@
+[
+  {"id": "q01", "type": "direct", "question": "When can a data subject require the erasure of their personal data?", "expected": ["GDPR - Article 17"]},
+  {"id": "q02", "type": "direct", "question": "How soon must a controller notify the supervisory authority of a personal data breach?", "expected": ["GDPR - Article 33"]},
+  {"id": "q03", "type": "direct", "question": "When is a data protection impact assessment required?", "expected": ["GDPR - Article 35"]},
+  {"id": "q04", "type": "direct", "question": "What are the conditions for valid consent to data processing?", "expected": ["GDPR - Article 7"]},
+  {"id": "q05", "type": "direct", "question": "Which AI practices are prohibited?", "expected": ["EU AI Act - Article 5"]},
+  {"id": "q06", "type": "direct", "question": "What obligations do providers of high-risk AI systems have?", "expected": ["EU AI Act - Article 16"]},
+  {"id": "q07", "type": "direct", "question": "What is the maximum administrative fine for infringing the data protection rules?", "expected": ["GDPR - Article 83"]},
+  {"id": "q08", "type": "direct", "question": "What transparency obligations apply to AI systems that interact directly with people?", "expected": ["EU AI Act - Article 50"]},
+  {"id": "q09", "type": "direct", "question": "What must a risk management system for high-risk AI systems involve?", "expected": ["EU AI Act - Article 9"]},
+  {"id": "q10", "type": "direct", "question": "Under what conditions is an AI system classified as high-risk?", "expected": ["EU AI Act - Article 6", "EU AI Act - Annex III"]},
+
+  {"id": "q11", "type": "plain", "question": "Can I ask a company for a copy of all the data it holds about me?", "expected": ["GDPR - Article 15"]},
+  {"id": "q12", "type": "plain", "question": "Can a company make important decisions about me using only an algorithm?", "expected": ["GDPR - Article 22"]},
+  {"id": "q13", "type": "plain", "question": "Can I move my data from one service to another?", "expected": ["GDPR - Article 20"]},
+  {"id": "q14", "type": "plain", "question": "Do I have to tell people when an image or video is AI-generated?", "expected": ["EU AI Act - Article 50"]},
+  {"id": "q15", "type": "plain", "question": "Does my company need a data protection officer?", "expected": ["GDPR - Article 37"]},
+  {"id": "q16", "type": "plain", "question": "Can I stop a company from using my data for marketing?", "expected": ["GDPR - Article 21"]},
+  {"id": "q17", "type": "plain", "question": "At what age can a child agree to data processing on their own?", "expected": ["GDPR - Article 8"]},
+  {"id": "q18", "type": "plain", "question": "Can a company send customer data to a server outside the EU?", "expected": ["GDPR - Article 44", "GDPR - Article 45", "GDPR - Article 46"]},
+  {"id": "q19", "type": "plain", "question": "Do employees need training to use AI tools at work?", "expected": ["EU AI Act - Article 4"]},
+  {"id": "q20", "type": "plain", "question": "Can I get compensation if a company mishandled my data?", "expected": ["GDPR - Article 82"]},
+  {"id": "q21", "type": "plain", "question": "Who is responsible when a company uses AI built by another vendor?", "expected": ["EU AI Act - Article 25", "EU AI Act - Article 26"]},
+
+  {"id": "q22", "type": "multi", "question": "What information must be given to people when their personal data is collected?", "expected": ["GDPR - Article 13", "GDPR - Article 14"]},
+  {"id": "q23", "type": "multi", "question": "How must a company protect the personal data it processes?", "expected": ["GDPR - Article 32", "GDPR - Article 25"]},
+  {"id": "q24", "type": "multi", "question": "What must a provider do before placing a high-risk AI system on the market?", "expected": ["EU AI Act - Article 43", "EU AI Act - Article 47", "EU AI Act - Article 48", "EU AI Act - Article 49"]},
+  {"id": "q25", "type": "multi", "question": "What penalties apply if someone uses a banned AI practice?", "expected": ["EU AI Act - Article 99"]},
+  {"id": "q26", "type": "multi", "question": "What must a company agree with an outside service that processes personal data for it?", "expected": ["GDPR - Article 28"]},
+  {"id": "q27", "type": "multi", "question": "What records of data processing do organizations have to keep?", "expected": ["GDPR - Article 30"]},
+
+  {"id": "q28", "type": "out_of_scope", "question": "What is the best pizza in Rome?", "expected": []},
+  {"id": "q29", "type": "out_of_scope", "question": "Who won the football World Cup in 2022?", "expected": []},
+  {"id": "q30", "type": "out_of_scope", "question": "How do I train a neural network in Python?", "expected": []},
+  {"id": "q31", "type": "out_of_scope", "question": "What is the minimum wage in Germany?", "expected": []},
+  {"id": "q32", "type": "out_of_scope", "question": "What does HIPAA require for medical records in the United States?", "expected": []},
+  {"id": "q33", "type": "out_of_scope", "question": "What does the California CCPA say about selling personal data?", "expected": []}
+]
