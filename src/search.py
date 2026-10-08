@@ -1,13 +1,15 @@
-import numpy as np
-from sentence_transformers import SentenceTransformer
+import sys
 
-from embed_chunks import EMBEDDINGS_PATH, MODEL_NAME, load_chunks
+import numpy as np
+
+from embed_chunks import load_index
+from embedders import DEFAULT_MODEL, Embedder
 
 TOP_K = 3  # how many results to show
 
 
-def search(query, model, chunks, embeddings, top_k=TOP_K):
-    query_vec = model.encode(query, normalize_embeddings=True)
+def search(query, embedder, chunks, embeddings, top_k=TOP_K):
+    query_vec = embedder.encode_query(query)
     scores = embeddings @ query_vec            # similarity of the question to every chunk
     best = np.argsort(scores)[::-1][:top_k]    # positions of the highest scores
     return [(chunks[i], float(scores[i])) for i in best]
@@ -20,15 +22,17 @@ def show(results):
 
 
 if __name__ == "__main__":
-    chunks = load_chunks()
-    embeddings = np.load(EMBEDDINGS_PATH)
-    if len(chunks) != len(embeddings):
-        raise SystemExit("Chunks and embeddings don't match. Run: python src/embed_chunks.py")
+    model_key = DEFAULT_MODEL
+    for arg in sys.argv[1:]:
+        if arg.startswith("--model="):
+            model_key = arg.split("=", 1)[1]
 
-    model = SentenceTransformer(MODEL_NAME)
+    # Recitals are left out of search (decided in Experiment 1)
+    chunks, embeddings = load_index(model_key, include_recitals=False)
+    embedder = Embedder(model_key)
     print("Type a question, or press Enter on an empty line to stop.")
     while True:
         query = input("\nQuestion: ").strip()
         if not query:
             break
-        show(search(query, model, chunks, embeddings))
+        show(search(query, embedder, chunks, embeddings))

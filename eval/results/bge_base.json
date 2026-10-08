@@ -1,0 +1,1122 @@
+{
+  "run": "bge_base",
+  "date": "2026-10-08",
+  "config": {
+    "model": "BAAI/bge-base-en-v1.5",
+    "max_chars": 1500,
+    "top_k": 5,
+    "chunks": 521,
+    "recitals_excluded": true
+  },
+  "summary": {
+    "n_scored": 27,
+    "n_out_of_scope": 6,
+    "hit_at_1": 0.7777777777777778,
+    "hit_at_3": 0.8518518518518519,
+    "hit_at_5": 0.8518518518518519,
+    "mrr": 0.8148148148148148,
+    "by_type": {
+      "direct": {
+        "n": 10,
+        "hit_at_3": 1.0
+      },
+      "multi": {
+        "n": 6,
+        "hit_at_3": 0.5
+      },
+      "plain": {
+        "n": 11,
+        "hit_at_3": 0.9090909090909091
+      }
+    },
+    "thresholds": {
+      "0.2": {
+        "real_questions_kept": 1.0,
+        "out_of_scope_refused": 0.0
+      },
+      "0.3": {
+        "real_questions_kept": 1.0,
+        "out_of_scope_refused": 0.0
+      },
+      "0.4": {
+        "real_questions_kept": 1.0,
+        "out_of_scope_refused": 0.16666666666666666
+      },
+      "0.5": {
+        "real_questions_kept": 1.0,
+        "out_of_scope_refused": 0.5
+      },
+      "0.55": {
+        "real_questions_kept": 1.0,
+        "out_of_scope_refused": 0.6666666666666666
+      },
+      "0.6": {
+        "real_questions_kept": 0.8888888888888888,
+        "out_of_scope_refused": 0.8333333333333334
+      },
+      "0.65": {
+        "real_questions_kept": 0.7407407407407407,
+        "out_of_scope_refused": 0.8333333333333334
+      },
+      "0.7": {
+        "real_questions_kept": 0.5555555555555556,
+        "out_of_scope_refused": 1.0
+      }
+    }
+  },
+  "details": [
+    {
+      "id": "q01",
+      "type": "direct",
+      "question": "When can a data subject require the erasure of their personal data?",
+      "expected": [
+        "GDPR - Article 17"
+      ],
+      "rank": 1,
+      "top_score": 0.749,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 17",
+          "score": 0.749
+        },
+        {
+          "label": "GDPR - Article 17",
+          "score": 0.724
+        },
+        {
+          "label": "GDPR - Article 19",
+          "score": 0.703
+        },
+        {
+          "label": "GDPR - Article 34",
+          "score": 0.694
+        },
+        {
+          "label": "GDPR - Article 5",
+          "score": 0.693
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "type": "direct",
+      "question": "How soon must a controller notify the supervisory authority of a personal data breach?",
+      "expected": [
+        "GDPR - Article 33"
+      ],
+      "rank": 1,
+      "top_score": 0.845,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 33",
+          "score": 0.845
+        },
+        {
+          "label": "GDPR - Article 34",
+          "score": 0.743
+        },
+        {
+          "label": "GDPR - Article 33",
+          "score": 0.714
+        },
+        {
+          "label": "GDPR - Article 60",
+          "score": 0.708
+        },
+        {
+          "label": "GDPR - Article 12",
+          "score": 0.692
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "type": "direct",
+      "question": "When is a data protection impact assessment required?",
+      "expected": [
+        "GDPR - Article 35"
+      ],
+      "rank": 1,
+      "top_score": 0.771,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 35",
+          "score": 0.771
+        },
+        {
+          "label": "GDPR - Article 35",
+          "score": 0.745
+        },
+        {
+          "label": "EU AI Act - Article 27",
+          "score": 0.706
+        },
+        {
+          "label": "GDPR - Article 35",
+          "score": 0.693
+        },
+        {
+          "label": "GDPR - Article 35",
+          "score": 0.686
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "type": "direct",
+      "question": "What are the conditions for valid consent to data processing?",
+      "expected": [
+        "GDPR - Article 7"
+      ],
+      "rank": 1,
+      "top_score": 0.784,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 7",
+          "score": 0.784
+        },
+        {
+          "label": "GDPR - Article 6",
+          "score": 0.763
+        },
+        {
+          "label": "GDPR - Article 21",
+          "score": 0.721
+        },
+        {
+          "label": "GDPR - Article 5",
+          "score": 0.718
+        },
+        {
+          "label": "GDPR - Article 18",
+          "score": 0.714
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "type": "direct",
+      "question": "Which AI practices are prohibited?",
+      "expected": [
+        "EU AI Act - Article 5"
+      ],
+      "rank": 1,
+      "top_score": 0.801,
+      "retrieved": [
+        {
+          "label": "EU AI Act - Article 5",
+          "score": 0.801
+        },
+        {
+          "label": "EU AI Act - Article 55",
+          "score": 0.688
+        },
+        {
+          "label": "EU AI Act - Article 53",
+          "score": 0.658
+        },
+        {
+          "label": "EU AI Act - Article 79",
+          "score": 0.652
+        },
+        {
+          "label": "EU AI Act - Article 56",
+          "score": 0.649
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "type": "direct",
+      "question": "What obligations do providers of high-risk AI systems have?",
+      "expected": [
+        "EU AI Act - Article 16"
+      ],
+      "rank": 1,
+      "top_score": 0.783,
+      "retrieved": [
+        {
+          "label": "EU AI Act - Article 16",
+          "score": 0.783
+        },
+        {
+          "label": "EU AI Act - Article 26",
+          "score": 0.776
+        },
+        {
+          "label": "EU AI Act - Article 25",
+          "score": 0.77
+        },
+        {
+          "label": "EU AI Act - Article 54",
+          "score": 0.764
+        },
+        {
+          "label": "EU AI Act - Article 24",
+          "score": 0.745
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "type": "direct",
+      "question": "What is the maximum administrative fine for infringing the data protection rules?",
+      "expected": [
+        "GDPR - Article 83"
+      ],
+      "rank": 2,
+      "top_score": 0.715,
+      "retrieved": [
+        {
+          "label": "EU AI Act - Article 100",
+          "score": 0.715
+        },
+        {
+          "label": "GDPR - Article 83",
+          "score": 0.697
+        },
+        {
+          "label": "GDPR - Article 83",
+          "score": 0.663
+        },
+        {
+          "label": "GDPR - Article 83",
+          "score": 0.656
+        },
+        {
+          "label": "GDPR - Article 83",
+          "score": 0.653
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "type": "direct",
+      "question": "What transparency obligations apply to AI systems that interact directly with people?",
+      "expected": [
+        "EU AI Act - Article 50"
+      ],
+      "rank": 1,
+      "top_score": 0.81,
+      "retrieved": [
+        {
+          "label": "EU AI Act - Article 50",
+          "score": 0.81
+        },
+        {
+          "label": "EU AI Act - Article 50",
+          "score": 0.72
+        },
+        {
+          "label": "EU AI Act - Article 13",
+          "score": 0.682
+        },
+        {
+          "label": "EU AI Act - Article 54",
+          "score": 0.674
+        },
+        {
+          "label": "EU AI Act - Annex XII",
+          "score": 0.674
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "type": "direct",
+      "question": "What must a risk management system for high-risk AI systems involve?",
+      "expected": [
+        "EU AI Act - Article 9"
+      ],
+      "rank": 1,
+      "top_score": 0.767,
+      "retrieved": [
+        {
+          "label": "EU AI Act - Article 9",
+          "score": 0.767
+        },
+        {
+          "label": "EU AI Act - Article 9",
+          "score": 0.725
+        },
+        {
+          "label": "EU AI Act - Article 17",
+          "score": 0.716
+        },
+        {
+          "label": "EU AI Act - Article 6",
+          "score": 0.701
+        },
+        {
+          "label": "EU AI Act - Article 8",
+          "score": 0.694
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "direct",
+      "question": "Under what conditions is an AI system classified as high-risk?",
+      "expected": [
+        "EU AI Act - Article 6",
+        "EU AI Act - Annex III"
+      ],
+      "rank": 1,
+      "top_score": 0.795,
+      "retrieved": [
+        {
+          "label": "EU AI Act - Article 6",
+          "score": 0.795
+        },
+        {
+          "label": "EU AI Act - Article 80",
+          "score": 0.755
+        },
+        {
+          "label": "EU AI Act - Article 9",
+          "score": 0.745
+        },
+        {
+          "label": "EU AI Act - Article 9",
+          "score": 0.74
+        },
+        {
+          "label": "EU AI Act - Annex III",
+          "score": 0.734
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "plain",
+      "question": "Can I ask a company for a copy of all the data it holds about me?",
+      "expected": [
+        "GDPR - Article 15"
+      ],
+      "rank": 1,
+      "top_score": 0.612,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 15",
+          "score": 0.612
+        },
+        {
+          "label": "GDPR - Article 33",
+          "score": 0.58
+        },
+        {
+          "label": "GDPR - Article 17",
+          "score": 0.579
+        },
+        {
+          "label": "GDPR - Article 5",
+          "score": 0.575
+        },
+        {
+          "label": "GDPR - Article 13",
+          "score": 0.572
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "plain",
+      "question": "Can a company make important decisions about me using only an algorithm?",
+      "expected": [
+        "GDPR - Article 22"
+      ],
+      "rank": 1,
+      "top_score": 0.585,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 22",
+          "score": 0.585
+        },
+        {
+          "label": "EU AI Act - Article 4a",
+          "score": 0.573
+        },
+        {
+          "label": "EU AI Act - Article 75",
+          "score": 0.56
+        },
+        {
+          "label": "EU AI Act - Article 92",
+          "score": 0.56
+        },
+        {
+          "label": "EU AI Act - Article 92",
+          "score": 0.556
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "plain",
+      "question": "Can I move my data from one service to another?",
+      "expected": [
+        "GDPR - Article 20"
+      ],
+      "rank": null,
+      "top_score": 0.589,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 44",
+          "score": 0.589
+        },
+        {
+          "label": "GDPR - Article 45",
+          "score": 0.579
+        },
+        {
+          "label": "GDPR - Article 48",
+          "score": 0.577
+        },
+        {
+          "label": "GDPR - Article 46",
+          "score": 0.561
+        },
+        {
+          "label": "GDPR - Article 15",
+          "score": 0.553
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "plain",
+      "question": "Do I have to tell people when an image or video is AI-generated?",
+      "expected": [
+        "EU AI Act - Article 50"
+      ],
+      "rank": 1,
+      "top_score": 0.653,
+      "retrieved": [
+        {
+          "label": "EU AI Act - Article 50",
+          "score": 0.653
+        },
+        {
+          "label": "EU AI Act - Article 50",
+          "score": 0.629
+        },
+        {
+          "label": "EU AI Act - Article 50",
+          "score": 0.627
+        },
+        {
+          "label": "EU AI Act - Article 5",
+          "score": 0.624
+        },
+        {
+          "label": "EU AI Act - Article 111",
+          "score": 0.585
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "type": "plain",
+      "question": "Does my company need a data protection officer?",
+      "expected": [
+        "GDPR - Article 37"
+      ],
+      "rank": 2,
+      "top_score": 0.744,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 39",
+          "score": 0.744
+        },
+        {
+          "label": "GDPR - Article 37",
+          "score": 0.731
+        },
+        {
+          "label": "GDPR - Article 38",
+          "score": 0.721
+        },
+        {
+          "label": "GDPR - Article 37",
+          "score": 0.703
+        },
+        {
+          "label": "GDPR - Article 35",
+          "score": 0.66
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "type": "plain",
+      "question": "Can I stop a company from using my data for marketing?",
+      "expected": [
+        "GDPR - Article 21"
+      ],
+      "rank": 1,
+      "top_score": 0.605,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 21",
+          "score": 0.605
+        },
+        {
+          "label": "GDPR - Article 14",
+          "score": 0.582
+        },
+        {
+          "label": "GDPR - Article 89",
+          "score": 0.571
+        },
+        {
+          "label": "GDPR - Article 22",
+          "score": 0.569
+        },
+        {
+          "label": "GDPR - Article 11",
+          "score": 0.558
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "type": "plain",
+      "question": "At what age can a child agree to data processing on their own?",
+      "expected": [
+        "GDPR - Article 8"
+      ],
+      "rank": 1,
+      "top_score": 0.687,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 8",
+          "score": 0.687
+        },
+        {
+          "label": "GDPR - Article 6",
+          "score": 0.61
+        },
+        {
+          "label": "GDPR - Article 12",
+          "score": 0.582
+        },
+        {
+          "label": "GDPR - Article 29",
+          "score": 0.58
+        },
+        {
+          "label": "GDPR - Article 13",
+          "score": 0.579
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "type": "plain",
+      "question": "Can a company send customer data to a server outside the EU?",
+      "expected": [
+        "GDPR - Article 44",
+        "GDPR - Article 45",
+        "GDPR - Article 46"
+      ],
+      "rank": 1,
+      "top_score": 0.625,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 45",
+          "score": 0.625
+        },
+        {
+          "label": "GDPR - Article 49",
+          "score": 0.618
+        },
+        {
+          "label": "GDPR - Article 48",
+          "score": 0.618
+        },
+        {
+          "label": "GDPR - Article 46",
+          "score": 0.615
+        },
+        {
+          "label": "GDPR - Article 49",
+          "score": 0.613
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "type": "plain",
+      "question": "Do employees need training to use AI tools at work?",
+      "expected": [
+        "EU AI Act - Article 4"
+      ],
+      "rank": 1,
+      "top_score": 0.595,
+      "retrieved": [
+        {
+          "label": "EU AI Act - Article 4",
+          "score": 0.595
+        },
+        {
+          "label": "EU AI Act - Article 10",
+          "score": 0.586
+        },
+        {
+          "label": "EU AI Act - Article 58",
+          "score": 0.585
+        },
+        {
+          "label": "EU AI Act - Article 27",
+          "score": 0.584
+        },
+        {
+          "label": "EU AI Act - Article 3",
+          "score": 0.579
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "type": "plain",
+      "question": "Can I get compensation if a company mishandled my data?",
+      "expected": [
+        "GDPR - Article 82"
+      ],
+      "rank": 1,
+      "top_score": 0.638,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 82",
+          "score": 0.638
+        },
+        {
+          "label": "GDPR - Article 82",
+          "score": 0.624
+        },
+        {
+          "label": "GDPR - Article 16",
+          "score": 0.588
+        },
+        {
+          "label": "GDPR - Article 77",
+          "score": 0.573
+        },
+        {
+          "label": "GDPR - Article 34",
+          "score": 0.569
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "type": "plain",
+      "question": "Who is responsible when a company uses AI built by another vendor?",
+      "expected": [
+        "EU AI Act - Article 25",
+        "EU AI Act - Article 26"
+      ],
+      "rank": 1,
+      "top_score": 0.683,
+      "retrieved": [
+        {
+          "label": "EU AI Act - Article 25",
+          "score": 0.683
+        },
+        {
+          "label": "EU AI Act - Article 54",
+          "score": 0.632
+        },
+        {
+          "label": "EU AI Act - Article 25",
+          "score": 0.626
+        },
+        {
+          "label": "EU AI Act - Article 24",
+          "score": 0.62
+        },
+        {
+          "label": "EU AI Act - Article 72",
+          "score": 0.605
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "type": "multi",
+      "question": "What information must be given to people when their personal data is collected?",
+      "expected": [
+        "GDPR - Article 13",
+        "GDPR - Article 14"
+      ],
+      "rank": 1,
+      "top_score": 0.77,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 13",
+          "score": 0.77
+        },
+        {
+          "label": "GDPR - Article 86",
+          "score": 0.722
+        },
+        {
+          "label": "GDPR - Article 14",
+          "score": 0.719
+        },
+        {
+          "label": "GDPR - Article 9",
+          "score": 0.709
+        },
+        {
+          "label": "GDPR - Article 34",
+          "score": 0.709
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "type": "multi",
+      "question": "How must a company protect the personal data it processes?",
+      "expected": [
+        "GDPR - Article 32",
+        "GDPR - Article 25"
+      ],
+      "rank": 1,
+      "top_score": 0.7,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 32",
+          "score": 0.7
+        },
+        {
+          "label": "GDPR - Article 5",
+          "score": 0.688
+        },
+        {
+          "label": "GDPR - Article 25",
+          "score": 0.675
+        },
+        {
+          "label": "GDPR - Article 9",
+          "score": 0.672
+        },
+        {
+          "label": "GDPR - Article 70",
+          "score": 0.672
+        }
+      ]
+    },
+    {
+      "id": "q24",
+      "type": "multi",
+      "question": "What must a provider do before placing a high-risk AI system on the market?",
+      "expected": [
+        "EU AI Act - Article 43",
+        "EU AI Act - Article 47",
+        "EU AI Act - Article 48",
+        "EU AI Act - Article 49"
+      ],
+      "rank": null,
+      "top_score": 0.74,
+      "retrieved": [
+        {
+          "label": "EU AI Act - Article 25",
+          "score": 0.74
+        },
+        {
+          "label": "EU AI Act - Article 25",
+          "score": 0.734
+        },
+        {
+          "label": "EU AI Act - Article 80",
+          "score": 0.716
+        },
+        {
+          "label": "EU AI Act - Article 6",
+          "score": 0.714
+        },
+        {
+          "label": "EU AI Act - Article 24",
+          "score": 0.709
+        }
+      ]
+    },
+    {
+      "id": "q25",
+      "type": "multi",
+      "question": "What penalties apply if someone uses a banned AI practice?",
+      "expected": [
+        "EU AI Act - Article 99"
+      ],
+      "rank": null,
+      "top_score": 0.73,
+      "retrieved": [
+        {
+          "label": "EU AI Act - Article 5",
+          "score": 0.73
+        },
+        {
+          "label": "EU AI Act - Article 101",
+          "score": 0.696
+        },
+        {
+          "label": "EU AI Act - Article 80",
+          "score": 0.656
+        },
+        {
+          "label": "EU AI Act - Article 5",
+          "score": 0.655
+        },
+        {
+          "label": "EU AI Act - Article 26",
+          "score": 0.649
+        }
+      ]
+    },
+    {
+      "id": "q26",
+      "type": "multi",
+      "question": "What must a company agree with an outside service that processes personal data for it?",
+      "expected": [
+        "GDPR - Article 28"
+      ],
+      "rank": null,
+      "top_score": 0.654,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 9",
+          "score": 0.654
+        },
+        {
+          "label": "GDPR - Article 21",
+          "score": 0.652
+        },
+        {
+          "label": "GDPR - Article 86",
+          "score": 0.651
+        },
+        {
+          "label": "GDPR - Article 40",
+          "score": 0.65
+        },
+        {
+          "label": "GDPR - Article 6",
+          "score": 0.648
+        }
+      ]
+    },
+    {
+      "id": "q27",
+      "type": "multi",
+      "question": "What records of data processing do organizations have to keep?",
+      "expected": [
+        "GDPR - Article 30"
+      ],
+      "rank": 1,
+      "top_score": 0.691,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 30",
+          "score": 0.691
+        },
+        {
+          "label": "GDPR - Article 5",
+          "score": 0.652
+        },
+        {
+          "label": "GDPR - Article 89",
+          "score": 0.635
+        },
+        {
+          "label": "GDPR - Article 32",
+          "score": 0.62
+        },
+        {
+          "label": "GDPR - Article 86",
+          "score": 0.614
+        }
+      ]
+    },
+    {
+      "id": "q28",
+      "type": "out_of_scope",
+      "question": "What is the best pizza in Rome?",
+      "expected": [],
+      "rank": null,
+      "top_score": 0.341,
+      "retrieved": [
+        {
+          "label": "EU AI Act - Article 94",
+          "score": 0.341
+        },
+        {
+          "label": "EU AI Act - Annex X",
+          "score": 0.336
+        },
+        {
+          "label": "EU AI Act - Article 59",
+          "score": 0.329
+        },
+        {
+          "label": "EU AI Act - Article 75c",
+          "score": 0.32
+        },
+        {
+          "label": "EU AI Act - Article 97",
+          "score": 0.32
+        }
+      ]
+    },
+    {
+      "id": "q29",
+      "type": "out_of_scope",
+      "question": "Who won the football World Cup in 2022?",
+      "expected": [],
+      "rank": null,
+      "top_score": 0.428,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 96",
+          "score": 0.428
+        },
+        {
+          "label": "GDPR - Article 99",
+          "score": 0.42
+        },
+        {
+          "label": "GDPR - Article 66",
+          "score": 0.4
+        },
+        {
+          "label": "EU AI Act - Article 110",
+          "score": 0.4
+        },
+        {
+          "label": "GDPR - Article 62",
+          "score": 0.395
+        }
+      ]
+    },
+    {
+      "id": "q30",
+      "type": "out_of_scope",
+      "question": "How do I train a neural network in Python?",
+      "expected": [],
+      "rank": null,
+      "top_score": 0.513,
+      "retrieved": [
+        {
+          "label": "EU AI Act - Article 10",
+          "score": 0.513
+        },
+        {
+          "label": "EU AI Act - Article 53",
+          "score": 0.512
+        },
+        {
+          "label": "EU AI Act - Article 15",
+          "score": 0.5
+        },
+        {
+          "label": "EU AI Act - Annex XI",
+          "score": 0.493
+        },
+        {
+          "label": "EU AI Act - Annex IV",
+          "score": 0.491
+        }
+      ]
+    },
+    {
+      "id": "q31",
+      "type": "out_of_scope",
+      "question": "What is the minimum wage in Germany?",
+      "expected": [],
+      "rank": null,
+      "top_score": 0.428,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 42",
+          "score": 0.428
+        },
+        {
+          "label": "GDPR - Article 61",
+          "score": 0.421
+        },
+        {
+          "label": "GDPR - Article 88",
+          "score": 0.419
+        },
+        {
+          "label": "GDPR - Article 53",
+          "score": 0.413
+        },
+        {
+          "label": "EU AI Act - Article 101",
+          "score": 0.409
+        }
+      ]
+    },
+    {
+      "id": "q32",
+      "type": "out_of_scope",
+      "question": "What does HIPAA require for medical records in the United States?",
+      "expected": [],
+      "rank": null,
+      "top_score": 0.653,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 9",
+          "score": 0.653
+        },
+        {
+          "label": "GDPR - Article 9",
+          "score": 0.579
+        },
+        {
+          "label": "EU AI Act - Article 12",
+          "score": 0.564
+        },
+        {
+          "label": "GDPR - Article 4",
+          "score": 0.56
+        },
+        {
+          "label": "EU AI Act - Article 74",
+          "score": 0.552
+        }
+      ]
+    },
+    {
+      "id": "q33",
+      "type": "out_of_scope",
+      "question": "What does the California CCPA say about selling personal data?",
+      "expected": [],
+      "rank": null,
+      "top_score": 0.592,
+      "retrieved": [
+        {
+          "label": "GDPR - Article 34",
+          "score": 0.592
+        },
+        {
+          "label": "GDPR - Article 33",
+          "score": 0.583
+        },
+        {
+          "label": "GDPR - Article 89",
+          "score": 0.581
+        },
+        {
+          "label": "GDPR - Article 70",
+          "score": 0.578
+        },
+        {
+          "label": "GDPR - Article 34",
+          "score": 0.578
+        }
+      ]
+    }
+  ]
+}

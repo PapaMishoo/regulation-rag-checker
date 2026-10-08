@@ -7,13 +7,14 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 
 from build_chunks import MAX_CHARS
-from embed_chunks import EMBEDDINGS_PATH, MODEL_NAME, load_chunks
+from embed_chunks import load_index
+from embedders import DEFAULT_MODEL, Embedder
 from search import search
 
 QUESTIONS_PATH = Path("eval/questions.json")
 RESULTS_DIR = Path("eval/results")
 TOP_K = 5
-THRESHOLDS = [0.2, 0.3, 0.4, 0.5]
+THRESHOLDS = [0.2, 0.3, 0.4, 0.5, 0.55, 0.6, 0.65, 0.7]
 
 
 def first_hit_rank(results, expected):
@@ -102,19 +103,15 @@ if __name__ == "__main__":
     flags = [a for a in sys.argv[1:] if a.startswith("--")]
     run_name = args[0] if args else "baseline"
     no_recitals = "--no-recitals" in flags
+    model_key = DEFAULT_MODEL
+    for f in flags:
+        if f.startswith("--model="):
+            model_key = f.split("=", 1)[1]
 
-    chunks = load_chunks()
-    embeddings = np.load(EMBEDDINGS_PATH)
+    chunks, embeddings = load_index(model_key, include_recitals=not no_recitals)
+    embedder = Embedder(model_key)
 
-    if no_recitals:
-        # Keep only articles and annexes; drop the recitals (labelled "Preamble")
-        keep = [i for i, c in enumerate(chunks) if not c["label"].endswith("Preamble")]
-        chunks = [chunks[i] for i in keep]
-        embeddings = embeddings[keep]
-
-    model = SentenceTransformer(MODEL_NAME)
-
-    details = run_questions(model, chunks, embeddings)
+    details = run_questions(embedder, chunks, embeddings)
     summary = summarize(details)
     print_report(run_name, summary, details)
 
@@ -123,7 +120,7 @@ if __name__ == "__main__":
         "run": run_name,
         "date": str(date.today()),
         "config": {
-            "model": MODEL_NAME,
+            "model": embedder.name,
             "max_chars": MAX_CHARS,
             "top_k": TOP_K,
             "chunks": len(chunks),
