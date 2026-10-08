@@ -98,10 +98,20 @@ def print_report(run_name, summary, details):
 
 
 if __name__ == "__main__":
-    run_name = sys.argv[1] if len(sys.argv) > 1 else "baseline"
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    flags = [a for a in sys.argv[1:] if a.startswith("--")]
+    run_name = args[0] if args else "baseline"
+    no_recitals = "--no-recitals" in flags
 
     chunks = load_chunks()
     embeddings = np.load(EMBEDDINGS_PATH)
+
+    if no_recitals:
+        # Keep only articles and annexes; drop the recitals (labelled "Preamble")
+        keep = [i for i, c in enumerate(chunks) if not c["label"].endswith("Preamble")]
+        chunks = [chunks[i] for i in keep]
+        embeddings = embeddings[keep]
+
     model = SentenceTransformer(MODEL_NAME)
 
     details = run_questions(model, chunks, embeddings)
@@ -112,7 +122,13 @@ if __name__ == "__main__":
     result = {
         "run": run_name,
         "date": str(date.today()),
-        "config": {"model": MODEL_NAME, "max_chars": MAX_CHARS, "top_k": TOP_K, "chunks": len(chunks)},
+        "config": {
+            "model": MODEL_NAME,
+            "max_chars": MAX_CHARS,
+            "top_k": TOP_K,
+            "chunks": len(chunks),
+            "recitals_excluded": no_recitals,
+        },
         "summary": summary,
         "details": details,
     }
