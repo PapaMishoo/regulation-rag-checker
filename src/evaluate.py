@@ -6,10 +6,10 @@ from pathlib import Path
 from build_chunks import MAX_CHARS
 from embed_chunks import load_index
 from embedders import DEFAULT_MODEL, Embedder
+from questions import load_questions
 from rerank import RERANKER_NAME, load_reranker, rerank
 from search import search
 
-QUESTIONS_PATH = Path("eval/questions.json")
 RESULTS_DIR = Path("eval/results")
 TOP_K = 5   # results we score
 POOL = 20   # candidates the search hands to the re-ranker
@@ -25,9 +25,8 @@ def first_hit_rank(results, expected):
 
 
 def run_questions(embedder, chunks, embeddings, reranker=None):
-    questions = json.loads(QUESTIONS_PATH.read_text(encoding="utf-8"))
     details = []
-    for q in questions:
+    for q in load_questions():
         pool = search(q["question"], embedder, chunks, embeddings, top_k=POOL)
         if reranker is not None:
             results = rerank(q["question"], pool, reranker)[:TOP_K]
@@ -37,6 +36,7 @@ def run_questions(embedder, chunks, embeddings, reranker=None):
         details.append({
             "id": q["id"],
             "type": q["type"],
+            "split": q["split"],
             "question": q["question"],
             "expected": q["expected"],
             "rank": first_hit_rank(results, q["expected"]) if has_answer else None,
@@ -81,7 +81,7 @@ def summarize(details):
 
 def print_report(run_name, summary, details):
     print("=" * 60)
-    print("Run:", run_name)
+    print("Run:", run_name, "  (dev questions)")
     print(f"Questions with a right answer: {summary['n_scored']}   Out of scope: {summary['n_out_of_scope']}")
     print(f"Hit@1: {summary['hit_at_1']:.0%}   Hit@3: {summary['hit_at_3']:.0%}   "
           f"Hit@5: {summary['hit_at_5']:.0%}   MRR: {summary['mrr']:.2f}")
@@ -106,12 +106,30 @@ def print_report(run_name, summary, details):
             print(f"       search rank of the right article: {d['pool_rank'] or 'not in top ' + str(POOL)}")
 
 
+def print_heldout(summary, details, reveal):
+    print("\n" + "=" * 60)
+    print("HELD-OUT questions (totals only, we never tune on these)")
+    print(f"Questions with a right answer: {summary['n_scored']}   Out of scope: {summary['n_out_of_scope']}")
+    print(f"Hit@1: {summary['hit_at_1']:.0%}   Hit@3: {summary['hit_at_3']:.0%}   "
+          f"Hit@5: {summary['hit_at_5']:.0%}   MRR: {summary['mrr']:.2f}")
+    cutoff = summary["thresholds"].get("0.55")
+    if cutoff:
+        print(f"At cutoff 0.55: real questions kept {cutoff['real_questions_kept']:.0%}, "
+              f"out-of-scope refused {cutoff['out_of_scope_refused']:.0%}")
+    if reveal:
+        print("\nHeld-out misses (revealed):")
+        for d in details:
+            if d["expected"] and (d["rank"] is None or d["rank"] > 3):
+                print(f"  [{d['id']}] {d['question']}  wanted: {', '.join(d['expected'])}  got #1: {d['retrieved'][0]['label']}")
+
+
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     flags = [a for a in sys.argv[1:] if a.startswith("--")]
     run_name = args[0] if args else "baseline"
     no_recitals = "--no-recitals" in flags
     use_rerank = "--rerank" in flags
+    reveal = "--reveal-heldout" in flags
     model_key = DEFAULT_MODEL
     for f in flags:
         if f.startswith("--model="):
@@ -122,8 +140,14 @@ if __name__ == "__main__":
     reranker = load_reranker() if use_rerank else None
 
     details = run_questions(embedder, chunks, embeddings, reranker)
-    summary = summarize(details)
-    print_report(run_name, summary, details)
+    dev = [d for d in details if d["split"] != "heldout"]
+    held = [d for d in details if d["split"] == "heldout"]
+
+    dev_summary = summarize(dev)
+    held_summary = summarize(held) if held else None
+    print_report(run_name, dev_summary, dev)
+    if held_summary:
+        print_heldout(held_summary, held, reveal)
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     result = {
@@ -138,8 +162,10 @@ if __name__ == "__main__":
             "chunks": len(chunks),
             "recitals_excluded": no_recitals,
         },
-        "summary": summary,
-        "details": details,
+        "summary": dev_summary,
+        "heldout_summary": held_summary,
+        "details": dev,
+        "heldout_details": held if reveal else "hidden",
     }
     out_path = RESULTS_DIR / f"{run_name}.json"
     out_path.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
