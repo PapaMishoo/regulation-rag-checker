@@ -138,6 +138,8 @@ if __name__ == "__main__":
     chunks, embeddings = load_index(model_key, include_recitals=not no_recitals)
     embedder = Embedder(model_key)
     reranker = load_reranker() if use_rerank else None
+    config_path = Path("data/processed/chunks_config.json")
+    chunk_config = json.loads(config_path.read_text(encoding="utf-8")) if config_path.exists() else None
 
     details = run_questions(embedder, chunks, embeddings, reranker)
     dev = [d for d in details if d["split"] != "heldout"]
@@ -161,6 +163,7 @@ if __name__ == "__main__":
             "pool": POOL,
             "chunks": len(chunks),
             "recitals_excluded": no_recitals,
+            "chunking": chunk_config,
         },
         "summary": dev_summary,
         "heldout_summary": held_summary,

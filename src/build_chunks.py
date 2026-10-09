@@ -1,5 +1,6 @@
 import json
 import re
+import sys
 from collections import Counter
 from pathlib import Path
 
@@ -7,7 +8,8 @@ import pymupdf
 
 DATA_DIR = Path("data")
 OUT_DIR = DATA_DIR / "processed"
-MAX_CHARS = 1500  # target chunk size; we will experiment with this later
+MAX_CHARS = 1500  # default chunk size
+MIN_CHARS = 300   # with --merge-short, a last piece shorter than this joins the piece before it
 
 SOURCES = {
     "GDPR": "gdpr_2016_679_en.pdf",
@@ -27,6 +29,7 @@ NOISE_PATTERNS = [
 ARTICLE_RE = re.compile(r"^Article (\d+)([a-z]?)$")
 ANNEX_RE = re.compile(r"^ANNEX ([IVXLC]+)$")
 STRUCTURE_RE = re.compile(r"^(CHAPTER [IVXLC]+|SECTION \d+)$")
+MARKER_RE = re.compile(r"[▼►][A-Z]\d*|◄")  # EUR-Lex amendment markers like ▼B and ▼M1
 
 
 def is_noise(line):
@@ -74,12 +77,15 @@ def split_sections(lines):
     return sections
 
 
-def join_lines(lines):
+def join_lines(lines, strip_markers=False):
     """Glue the wrapped lines back into normal flowing text."""
-    return re.sub(r"\s+", " ", " ".join(lines)).strip()
+    text = re.sub(r"\s+", " ", " ".join(lines))
+    if strip_markers:
+        text = re.sub(r"\s+", " ", MARKER_RE.sub("", text))
+    return text.strip()
 
 
-def split_text(text, max_chars):
+def split_text(text, max_chars, merge_short=False):
     """Break long text into chunks of up to max_chars, cutting between sentences."""
     pieces = re.split(r"(?<=[.;:])\s+", text)
     chunks, current = [], ""
@@ -91,10 +97,13 @@ def split_text(text, max_chars):
             current = f"{current} {piece}".strip()
     if current:
         chunks.append(current)
+    if merge_short and len(chunks) > 1 and len(chunks[-1]) < MIN_CHARS:
+        last = chunks.pop()
+        chunks[-1] = f"{chunks[-1]} {last}"
     return chunks
 
 
-def build_chunks(max_chars=MAX_CHARS):
+def build_chunks(max_chars=MAX_CHARS, strip_markers=False, merge_short=False):
     all_chunks = []
     for source, filename in SOURCES.items():
         lines = load_lines(DATA_DIR / filename)
@@ -102,14 +111,14 @@ def build_chunks(max_chars=MAX_CHARS):
 
         chunks = []
         for section in sections:
-            text = join_lines(section["lines"])
+            text = join_lines(section["lines"], strip_markers)
             if not text:
                 continue
             if section["kind"] == "Preamble":
                 label = f"{source} - Preamble"
             else:
                 label = f"{source} - {section['kind']} {section['number']}"
-            for i, part in enumerate(split_text(text, max_chars), start=1):
+            for i, part in enumerate(split_text(text, max_chars, merge_short), start=1):
                 chunks.append({
                     "id": f"{label} #{i}",
                     "label": label,
@@ -139,6 +148,7 @@ def report(source, lines, sections, chunks):
     print("Annex numbers:", [s["number"] for s in annexes])
     print("Chunks:", len(chunks))
     print("Chunk length (min / average / max):", min(lengths), sum(lengths) // len(lengths), max(lengths))
+    print("Amendment markers left in chunks:", sum(c["text"].count("▼") + c["text"].count("►") for c in chunks))
     print("Most repeated lines (leftover page headers show up here):")
     long_lines = [line for line in lines if len(line) > 6]
     for line, count in Counter(long_lines).most_common(5):
@@ -156,12 +166,26 @@ def show_sample(chunks, label):
 
 
 if __name__ == "__main__":
-    chunks = build_chunks()
+    flags = sys.argv[1:]
+    max_chars = MAX_CHARS
+    for flag in flags:
+        if flag.startswith("--max-chars="):
+            max_chars = int(flag.split("=", 1)[1])
+    options = {
+        "max_chars": max_chars,
+        "strip_markers": "--strip-markers" in flags,
+        "merge_short": "--merge-short" in flags,
+    }
+
+    chunks = build_chunks(**options)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    with open(OUT_DIR / "chunks.jsonl", "w", encoding="utf-8") as f:
+    with open(OUT_DIR / "chunks.jsonl", "w", encoding="utf-8") as out:
         for c in chunks:
-            f.write(json.dumps(c, ensure_ascii=False) + "\n")
+            out.write(json.dumps(c, ensure_ascii=False) + "\n")
+    (OUT_DIR / "chunks_config.json").write_text(json.dumps(options, indent=2), encoding="utf-8")
+
     print("=" * 60)
+    print("Chunk settings:", options)
     print("Total chunks saved:", len(chunks))
     show_sample(chunks, "GDPR - Article 20")
     show_sample(chunks, "EU AI Act - Article 5")
