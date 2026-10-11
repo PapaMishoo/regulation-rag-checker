@@ -68,6 +68,9 @@ def answer_question(question, embedder, chunks, embeddings):
     start = time.time()
     try:
         raw, tokens_in, tokens_out = llm.generate(SYSTEM_PROMPT, build_prompt(question, results))
+    except llm.QuotaExhausted as error:
+        out.update(status="quota_exhausted", answer=str(error))
+        return out
     except Exception as error:
         out.update(status="api_error", answer=f"The model call failed: {error}")
         return out

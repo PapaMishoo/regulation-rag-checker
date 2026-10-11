@@ -1,4 +1,5 @@
 import os
+import re
 import time
 
 from dotenv import load_dotenv
@@ -8,9 +9,14 @@ from google.genai import types
 load_dotenv()
 
 PROVIDER = "gemini"
-MODEL = "gemini-3.5-flash"  # the one place to change if you want to try another model
+MODEL = "gemini-3.5-flash-lite"  # the one place to change if you want to try another model
+MAX_WAIT = 90  # seconds; if the service asks for a longer wait than this, give up instead of retrying
 
 _client = None
+
+
+class QuotaExhausted(Exception):
+    """The free tier says to come back much later (for example, the daily limit is used up)."""
 
 
 def _get_client():
@@ -21,6 +27,15 @@ def _get_client():
             raise SystemExit("No GEMINI_API_KEY found. Check that your .env file has GEMINI_API_KEY=... in it.")
         _client = genai.Client(api_key=key)
     return _client
+
+
+def _retry_seconds(message):
+    """Read hints like 'Please retry in 13h12m12.03s' from an error message."""
+    match = re.search(r"retry in (?:(\d+)h)?(?:(\d+)m)?(?:([\d.]+)s)?", message)
+    if not match or not any(match.groups()):
+        return None
+    hours, minutes, seconds = match.groups()
+    return int(hours or 0) * 3600 + int(minutes or 0) * 60 + float(seconds or 0)
 
 
 def generate(system_prompt, user_prompt, max_tokens=2000):
@@ -44,8 +59,18 @@ def generate(system_prompt, user_prompt, max_tokens=2000):
             )
         except Exception as error:
             last_error = error
-            if any(code in str(error) for code in ("429", "503", "RESOURCE_EXHAUSTED", "UNAVAILABLE")):
-                time.sleep(10 * (attempt + 1))  # free tier is busy or rate-limited: wait, then retry
+            message = str(error)
+            if "429" in message or "RESOURCE_EXHAUSTED" in message:
+                wait = _retry_seconds(message)
+                if wait is None:
+                    wait = 15 * (attempt + 1)
+                if wait > MAX_WAIT:
+                    raise QuotaExhausted(
+                        f"{MODEL}: quota used up. The service says to retry in about {int(wait // 60)} minutes.")
+                time.sleep(wait + 1)   # a short per-minute limit: wait as asked, then try again
+                continue
+            if "503" in message or "UNAVAILABLE" in message:
+                time.sleep(10 * (attempt + 1))
                 continue
             break
     raise RuntimeError(str(last_error))
