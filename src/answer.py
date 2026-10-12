@@ -45,6 +45,13 @@ def parse_reply(text):
             return None
     return None
 
+def label_tags(text, labels_by_tag):
+    """Replace tags like [S4] or [S1, S3] inside the answer text with the article labels."""
+    def swap(match):
+        tags = re.findall(r"S\d+", match.group(0))
+        labels = [labels_by_tag.get(t, "unknown source") for t in tags]
+        return "[" + "; ".join(dict.fromkeys(labels)) + "]"
+    return re.sub(r"\[\s*S\d+(?:\s*[,;]\s*S\d+)*\s*\]", swap, text)
 
 def answer_question(question, embedder, chunks, embeddings, use_rewrite=True):
     if use_rewrite:
@@ -105,7 +112,7 @@ def answer_question(question, embedder, chunks, embeddings, use_rewrite=True):
             out["bad_citations"].append(str(item))
         elif label not in out["citations"]:
             out["citations"].append(label)
-    out["answer"] = reply.get("answer", "")
+    out["answer"] = label_tags(reply.get("answer", ""), labels_by_tag)
     out["status"] = "answered" if out["citations"] else "answered_without_valid_citation"
     return out
 
