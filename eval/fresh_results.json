@@ -1,0 +1,854 @@
+{
+  "date": "2026-10-13",
+  "llm": "gemini-3.5-flash-lite",
+  "retrieval_before_rewriting": [
+    {
+      "id": "f01",
+      "question": "Is a photo of someone or an IP address counted as personal data?",
+      "expected": [
+        "GDPR - Article 4"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "GDPR - Article 4"
+    },
+    {
+      "id": "f02",
+      "question": "How long does a company have to reply when I ask to see my data?",
+      "expected": [
+        "GDPR - Article 12"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "GDPR - Article 12"
+    },
+    {
+      "id": "f03",
+      "question": "Do companies have to build privacy into their apps and websites from the start?",
+      "expected": [
+        "GDPR - Article 25"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "GDPR - Article 25"
+    },
+    {
+      "id": "f04",
+      "question": "If a company passed my data on to other firms, do those firms have to be told when I ask for deletion?",
+      "expected": [
+        "GDPR - Article 19",
+        "GDPR - Article 17"
+      ],
+      "rank": 2,
+      "pool_rank": 2,
+      "got": "GDPR - Article 49"
+    },
+    {
+      "id": "f05",
+      "question": "What powers does a data protection regulator have to check up on a company?",
+      "expected": [
+        "GDPR - Article 58"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "GDPR - Article 58"
+    },
+    {
+      "id": "f06",
+      "question": "Can my data be sent to a country without strong privacy laws if I clearly agree to it?",
+      "expected": [
+        "GDPR - Article 49"
+      ],
+      "rank": 5,
+      "pool_rank": 5,
+      "got": "GDPR - Article 48"
+    },
+    {
+      "id": "f07",
+      "question": "Can a charity or consumer group make a complaint on my behalf?",
+      "expected": [
+        "GDPR - Article 80"
+      ],
+      "rank": 2,
+      "pool_rank": 2,
+      "got": "GDPR - Article 77"
+    },
+    {
+      "id": "f08",
+      "question": "What does the AI Act mean by an AI system?",
+      "expected": [
+        "EU AI Act - Article 3"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "EU AI Act - Article 3"
+    },
+    {
+      "id": "f09",
+      "question": "What information must the maker of a risky AI system give to the businesses that use it?",
+      "expected": [
+        "EU AI Act - Article 13"
+      ],
+      "rank": 3,
+      "pool_rank": 3,
+      "got": "EU AI Act - Article 25"
+    },
+    {
+      "id": "f10",
+      "question": "How accurate and secure does a high-risk AI system have to be?",
+      "expected": [
+        "EU AI Act - Article 15"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "EU AI Act - Article 15"
+    },
+    {
+      "id": "f11",
+      "question": "Does the company that builds a risky AI system need a formal quality control process?",
+      "expected": [
+        "EU AI Act - Article 17"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "EU AI Act - Article 17"
+    },
+    {
+      "id": "f12",
+      "question": "What extra duties apply to the most powerful general-purpose AI models?",
+      "expected": [
+        "EU AI Act - Article 55",
+        "EU AI Act - Article 51"
+      ],
+      "rank": 2,
+      "pool_rank": 2,
+      "got": "EU AI Act - Article 3"
+    },
+    {
+      "id": "f13",
+      "question": "When do the AI Act's rules start to apply?",
+      "expected": [
+        "EU AI Act - Article 113"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "EU AI Act - Article 113"
+    },
+    {
+      "id": "f14",
+      "question": "What does Japan's APPI say about sharing personal data with third parties?",
+      "expected": [],
+      "rank": null,
+      "pool_rank": null,
+      "got": "GDPR - Article 15"
+    },
+    {
+      "id": "f15",
+      "question": "What does the EU Digital Services Act require from online platforms?",
+      "expected": [],
+      "rank": null,
+      "pool_rank": null,
+      "got": "EU AI Act - Article 41"
+    },
+    {
+      "id": "f16",
+      "question": "What must companies report under the NIS2 cybersecurity directive?",
+      "expected": [],
+      "rank": null,
+      "pool_rank": null,
+      "got": "GDPR - Article 59"
+    },
+    {
+      "id": "f17",
+      "question": "How do I make a good cup of tea?",
+      "expected": [],
+      "rank": null,
+      "pool_rank": null,
+      "got": "GDPR - Article 73"
+    }
+  ],
+  "retrieval_with_rewriting": [
+    {
+      "id": "f01",
+      "question": "Is a photo of someone or an IP address counted as personal data?",
+      "expected": [
+        "GDPR - Article 4"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "GDPR - Article 4",
+      "rewrite": "definition of personal data including image data and internet protocol address"
+    },
+    {
+      "id": "f02",
+      "question": "How long does a company have to reply when I ask to see my data?",
+      "expected": [
+        "GDPR - Article 12"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "GDPR - Article 12",
+      "rewrite": "time limit for data controller response to data subject access request"
+    },
+    {
+      "id": "f03",
+      "question": "Do companies have to build privacy into their apps and websites from the start?",
+      "expected": [
+        "GDPR - Article 25"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "GDPR - Article 25",
+      "rewrite": "data protection by design and by default"
+    },
+    {
+      "id": "f04",
+      "question": "If a company passed my data on to other firms, do those firms have to be told when I ask for deletion?",
+      "expected": [
+        "GDPR - Article 19",
+        "GDPR - Article 17"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "GDPR - Article 19",
+      "rewrite": "obligation of the controller to notify other recipients regarding rectification or erasure of personal data"
+    },
+    {
+      "id": "f05",
+      "question": "What powers does a data protection regulator have to check up on a company?",
+      "expected": [
+        "GDPR - Article 58"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "GDPR - Article 58",
+      "rewrite": "supervisory authority investigative powers"
+    },
+    {
+      "id": "f06",
+      "question": "Can my data be sent to a country without strong privacy laws if I clearly agree to it?",
+      "expected": [
+        "GDPR - Article 49"
+      ],
+      "rank": null,
+      "pool_rank": 8,
+      "got": "GDPR - Article 45",
+      "rewrite": "transfer of personal data to a third country or international organisation based on explicit consent"
+    },
+    {
+      "id": "f07",
+      "question": "Can a charity or consumer group make a complaint on my behalf?",
+      "expected": [
+        "GDPR - Article 80"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "GDPR - Article 80",
+      "rewrite": "mandate of data subject representation by not-for-profit bodies organisations or associations"
+    },
+    {
+      "id": "f08",
+      "question": "What does the AI Act mean by an AI system?",
+      "expected": [
+        "EU AI Act - Article 3"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "EU AI Act - Article 3",
+      "rewrite": "definition of artificial intelligence system"
+    },
+    {
+      "id": "f09",
+      "question": "What information must the maker of a risky AI system give to the businesses that use it?",
+      "expected": [
+        "EU AI Act - Article 13"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "EU AI Act - Article 13",
+      "rewrite": "provider transparency obligations and information provision to deployers of high-risk artificial intelligence systems"
+    },
+    {
+      "id": "f10",
+      "question": "How accurate and secure does a high-risk AI system have to be?",
+      "expected": [
+        "EU AI Act - Article 15"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "EU AI Act - Article 15",
+      "rewrite": "requirements for accuracy robustness and cybersecurity of high-risk artificial intelligence systems"
+    },
+    {
+      "id": "f11",
+      "question": "Does the company that builds a risky AI system need a formal quality control process?",
+      "expected": [
+        "EU AI Act - Article 17"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "EU AI Act - Article 17",
+      "rewrite": "quality management system for high-risk artificial intelligence systems provider compliance"
+    },
+    {
+      "id": "f12",
+      "question": "What extra duties apply to the most powerful general-purpose AI models?",
+      "expected": [
+        "EU AI Act - Article 55",
+        "EU AI Act - Article 51"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "EU AI Act - Article 55",
+      "rewrite": "systemic risk general-purpose artificial intelligence models obligations"
+    },
+    {
+      "id": "f13",
+      "question": "When do the AI Act's rules start to apply?",
+      "expected": [
+        "EU AI Act - Article 113"
+      ],
+      "rank": 1,
+      "pool_rank": 1,
+      "got": "EU AI Act - Article 113",
+      "rewrite": "entry into force and application dates of artificial intelligence regulations"
+    },
+    {
+      "id": "f14",
+      "question": "What does Japan's APPI say about sharing personal data with third parties?",
+      "expected": [],
+      "rank": null,
+      "pool_rank": null,
+      "got": "GDPR - Article 45",
+      "rewrite": "third-party provision of personal data cross-border transfer"
+    },
+    {
+      "id": "f15",
+      "question": "What does the EU Digital Services Act require from online platforms?",
+      "expected": [],
+      "rank": null,
+      "pool_rank": null,
+      "got": "EU AI Act - Article 50",
+      "rewrite": "due diligence obligations for providers of intermediary services online platforms transparency notice and action mechanisms"
+    },
+    {
+      "id": "f16",
+      "question": "What must companies report under the NIS2 cybersecurity directive?",
+      "expected": [],
+      "rank": null,
+      "pool_rank": null,
+      "got": "EU AI Act - Article 34",
+      "rewrite": "incident notification obligations for essential and important entities regarding significant cybersecurity incidents"
+    },
+    {
+      "id": "f17",
+      "question": "How do I make a good cup of tea?",
+      "expected": [],
+      "rank": null,
+      "pool_rank": null,
+      "got": "GDPR - Article 6",
+      "rewrite": "brewing of tea beverages processing methodology"
+    }
+  ],
+  "answers": [
+    {
+      "id": "f01",
+      "type": "plain",
+      "split": "fresh",
+      "question": "Is a photo of someone or an IP address counted as personal data?",
+      "expected": [
+        "GDPR - Article 4"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Personal data includes any information relating to an identified or identifiable natural person, which can be identified directly or indirectly by an identifier such as an online identifier. Additionally, biometric data, which encompasses facial images that allow or confirm unique identification, also qualifies as personal data.",
+      "citations": [
+        "GDPR - Article 4"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 4",
+        "GDPR - Article 86",
+        "GDPR - Article 21",
+        "GDPR - Article 4",
+        "GDPR - Article 9"
+      ],
+      "top_score": 0.647,
+      "seconds": 0.96,
+      "tokens_in": 1124,
+      "tokens_out": 73,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "f02",
+      "type": "plain",
+      "split": "fresh",
+      "question": "How long does a company have to reply when I ask to see my data?",
+      "expected": [
+        "GDPR - Article 12"
+      ],
+      "status": "refused_by_model",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 12",
+        "GDPR - Article 15",
+        "GDPR - Article 33",
+        "GDPR - Article 36",
+        "GDPR - Article 14"
+      ],
+      "top_score": 0.646,
+      "seconds": 0.85,
+      "tokens_in": 1595,
+      "tokens_out": 15,
+      "in_passages": true,
+      "cited_expected": false,
+      "false_refusal": true
+    },
+    {
+      "id": "f03",
+      "type": "plain",
+      "split": "fresh",
+      "question": "Do companies have to build privacy into their apps and websites from the start?",
+      "expected": [
+        "GDPR - Article 25"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Controllers must implement appropriate technical and organisational measures both at the time of determining the means for processing and during the processing itself. These measures are designed to effectively implement data-protection principles like data minimisation and integrate necessary safeguards.",
+      "citations": [
+        "GDPR - Article 25"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 25",
+        "GDPR - Article 70",
+        "GDPR - Article 47",
+        "GDPR - Article 22",
+        "GDPR - Article 70"
+      ],
+      "top_score": 0.589,
+      "seconds": 0.97,
+      "tokens_in": 1660,
+      "tokens_out": 61,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "f04",
+      "type": "plain",
+      "split": "fresh",
+      "question": "If a company passed my data on to other firms, do those firms have to be told when I ask for deletion?",
+      "expected": [
+        "GDPR - Article 19",
+        "GDPR - Article 17"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "The controller must communicate any erasure of personal data to each recipient to whom the data has been disclosed, unless this proves impossible or involves disproportionate effort. The controller is also required to inform the data subject about those recipients upon request.",
+      "citations": [
+        "GDPR - Article 19"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 19",
+        "GDPR - Article 33",
+        "GDPR - Article 16",
+        "GDPR - Article 34",
+        "GDPR - Article 15"
+      ],
+      "top_score": 0.638,
+      "seconds": 0.91,
+      "tokens_in": 1147,
+      "tokens_out": 63,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "f05",
+      "type": "plain",
+      "split": "fresh",
+      "question": "What powers does a data protection regulator have to check up on a company?",
+      "expected": [
+        "GDPR - Article 58"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Supervisory authorities possess investigative powers such as ordering controllers or processors to provide information, conducting data protection audits, and obtaining access to personal data and premises including data processing equipment. They can also carry out reviews on certifications and notify entities of alleged infringements.",
+      "citations": [
+        "GDPR - Article 58"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 58",
+        "GDPR - Article 39",
+        "GDPR - Article 62",
+        "GDPR - Article 41",
+        "GDPR - Article 37"
+      ],
+      "top_score": 0.712,
+      "seconds": 1.02,
+      "tokens_in": 1446,
+      "tokens_out": 67,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "f06",
+      "type": "plain",
+      "split": "fresh",
+      "question": "Can my data be sent to a country without strong privacy laws if I clearly agree to it?",
+      "expected": [
+        "GDPR - Article 49"
+      ],
+      "status": "refused_by_model",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 45",
+        "GDPR - Article 46",
+        "GDPR - Article 44",
+        "GDPR - Article 15",
+        "GDPR - Article 48"
+      ],
+      "top_score": 0.692,
+      "seconds": 0.8,
+      "tokens_in": 1166,
+      "tokens_out": 15,
+      "in_passages": false,
+      "cited_expected": false,
+      "false_refusal": true
+    },
+    {
+      "id": "f07",
+      "type": "plain",
+      "split": "fresh",
+      "question": "Can a charity or consumer group make a complaint on my behalf?",
+      "expected": [
+        "GDPR - Article 80"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "A data subject has the right to mandate a properly constituted, non-profit body, organisation, or association that is active in protecting data subjects' rights to lodge a complaint on their behalf. Additionally, Member States may allow these bodies to lodge a complaint independently of a mandate if they consider that a data subject's rights have been infringed.",
+      "citations": [
+        "GDPR - Article 80"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 80",
+        "GDPR - Article 43",
+        "EU AI Act - Article 10",
+        "GDPR - Article 77",
+        "EU AI Act - Article 34"
+      ],
+      "top_score": 0.613,
+      "seconds": 1.03,
+      "tokens_in": 1518,
+      "tokens_out": 85,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "f08",
+      "type": "direct",
+      "split": "fresh",
+      "question": "What does the AI Act mean by an AI system?",
+      "expected": [
+        "EU AI Act - Article 3"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "An AI system is defined as a machine-based system designed to operate with varying levels of autonomy that may exhibit adaptiveness after deployment. It infers from received inputs to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments for explicit or implicit objectives.",
+      "citations": [
+        "EU AI Act - Article 3"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 3",
+        "EU AI Act - Annex III",
+        "EU AI Act - Article 108",
+        "EU AI Act - Article 3",
+        "EU AI Act - Article 1"
+      ],
+      "top_score": 0.755,
+      "seconds": 1.07,
+      "tokens_in": 1497,
+      "tokens_out": 76,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "f09",
+      "type": "plain",
+      "split": "fresh",
+      "question": "What information must the maker of a risky AI system give to the businesses that use it?",
+      "expected": [
+        "EU AI Act - Article 13"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Makers of high-risk AI systems must provide instructions for use in an appropriate digital format that are concise, complete, correct, and clear. These instructions must include the provider's identity and contact details, as well as the system's performance characteristics, capabilities, and limitations. This includes its intended purpose, level of accuracy, metrics, robustness, cybersecurity tested levels, and any foreseeable circumstances affecting them.",
+      "citations": [
+        "EU AI Act - Article 13"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 13",
+        "EU AI Act - Article 50",
+        "EU AI Act - Article 26",
+        "EU AI Act - Article 16",
+        "EU AI Act - Article 20"
+      ],
+      "top_score": 0.653,
+      "seconds": 1.1,
+      "tokens_in": 1660,
+      "tokens_out": 99,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "f10",
+      "type": "plain",
+      "split": "fresh",
+      "question": "How accurate and secure does a high-risk AI system have to be?",
+      "expected": [
+        "EU AI Act - Article 15"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "High-risk AI systems must be designed and developed to achieve an appropriate level of accuracy, robustness, and cybersecurity, performing consistently throughout their lifecycle. Their specific levels of accuracy and relevant metrics must be declared in the accompanying instructions for use. Furthermore, these systems must be resilient against errors, faults, and unauthorized attempts by third parties to alter their performance or use.",
+      "citations": [
+        "EU AI Act - Article 15",
+        "EU AI Act - Article 13"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 15",
+        "EU AI Act - Article 42",
+        "EU AI Act - Article 15",
+        "EU AI Act - Article 9",
+        "EU AI Act - Article 13"
+      ],
+      "top_score": 0.751,
+      "seconds": 1.02,
+      "tokens_in": 1531,
+      "tokens_out": 97,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "f11",
+      "type": "plain",
+      "split": "fresh",
+      "question": "Does the company that builds a risky AI system need a formal quality control process?",
+      "expected": [
+        "EU AI Act - Article 17"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Providers of high-risk AI systems must establish a quality management system that ensures compliance with the regulation. This system must include documented procedures and techniques for quality control and quality assurance during the development of the system.",
+      "citations": [
+        "EU AI Act - Article 17",
+        "EU AI Act - Article 16"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 17",
+        "EU AI Act - Article 17",
+        "EU AI Act - Article 8",
+        "EU AI Act - Article 16",
+        "EU AI Act - Article 43"
+      ],
+      "top_score": 0.692,
+      "seconds": 0.99,
+      "tokens_in": 1671,
+      "tokens_out": 62,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "f12",
+      "type": "plain",
+      "split": "fresh",
+      "question": "What extra duties apply to the most powerful general-purpose AI models?",
+      "expected": [
+        "EU AI Act - Article 55",
+        "EU AI Act - Article 51"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Providers of general-purpose AI models with systemic risk must perform standardized model evaluations, including adversarial testing, and assess and mitigate possible systemic risks at the Union level. They are also required to track, document, and report serious incidents without undue delay and ensure adequate cybersecurity protection for both the model and its physical infrastructure.",
+      "citations": [
+        "EU AI Act - Article 55"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 55",
+        "EU AI Act - Article 51",
+        "EU AI Act - Article 52",
+        "EU AI Act - Annex XIII",
+        "EU AI Act - Article 52"
+      ],
+      "top_score": 0.719,
+      "seconds": 1.24,
+      "tokens_in": 1446,
+      "tokens_out": 79,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "f13",
+      "type": "direct",
+      "split": "fresh",
+      "question": "When do the AI Act's rules start to apply?",
+      "expected": [
+        "EU AI Act - Article 113"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "The EU AI Act generally enters into force on the twentieth day following its publication and applies from 2 August 2026. However, different chapters and specific articles have varied application dates, such as Chapters I and II applying from 2 February 2025, and certain sections applying from 2 August 2025 and 2 December 2027 or 2028 depending on the high-risk classification of the AI systems.",
+      "citations": [
+        "EU AI Act - Article 113"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 113",
+        "EU AI Act - Article 111",
+        "GDPR - Article 99",
+        "EU AI Act - Article 111",
+        "EU AI Act - Article 105"
+      ],
+      "top_score": 0.761,
+      "seconds": 1.12,
+      "tokens_in": 1592,
+      "tokens_out": 128,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "f14",
+      "type": "out_of_scope",
+      "split": "fresh",
+      "question": "What does Japan's APPI say about sharing personal data with third parties?",
+      "expected": [],
+      "status": "refused_by_model",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 45",
+        "GDPR - Article 46",
+        "GDPR - Article 15",
+        "GDPR - Article 44",
+        "GDPR - Article 48"
+      ],
+      "top_score": 0.586,
+      "seconds": 0.84,
+      "tokens_in": 1163,
+      "tokens_out": 15,
+      "correctly_refused": true
+    },
+    {
+      "id": "f15",
+      "type": "out_of_scope",
+      "split": "fresh",
+      "question": "What does the EU Digital Services Act require from online platforms?",
+      "expected": [],
+      "status": "refused_by_model",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 50",
+        "EU AI Act - Article 41",
+        "EU AI Act - Annex X",
+        "EU AI Act - Article 70",
+        "EU AI Act - Article 45"
+      ],
+      "top_score": 0.623,
+      "seconds": 1.0,
+      "tokens_in": 1838,
+      "tokens_out": 15,
+      "correctly_refused": true
+    },
+    {
+      "id": "f16",
+      "type": "out_of_scope",
+      "split": "fresh",
+      "question": "What must companies report under the NIS2 cybersecurity directive?",
+      "expected": [],
+      "status": "refused_by_model",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 34",
+        "GDPR - Article 59",
+        "EU AI Act - Article 31",
+        "GDPR - Article 33",
+        "EU AI Act - Article 87"
+      ],
+      "top_score": 0.665,
+      "seconds": 1.06,
+      "tokens_in": 1196,
+      "tokens_out": 15,
+      "correctly_refused": true
+    },
+    {
+      "id": "f17",
+      "type": "out_of_scope",
+      "split": "fresh",
+      "question": "How do I make a good cup of tea?",
+      "expected": [],
+      "status": "refused_low_score",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 6",
+        "GDPR - Article 9",
+        "GDPR - Article 9",
+        "GDPR - Article 32",
+        "GDPR - Article 28"
+      ],
+      "top_score": 0.398,
+      "seconds": 0.0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "correctly_refused": true
+    }
+  ],
+  "answer_summary": {
+    "n_real": 13,
+    "n_off_topic": 4,
+    "n_failed": 0,
+    "false_refusal_rate": 0.15384615384615385,
+    "right_article_in_passages": 0.9230769230769231,
+    "cited_expected_of_all_real": 0.8461538461538461,
+    "cited_expected_of_answered": 1.0,
+    "off_topic_refused": 1.0,
+    "answers_with_invalid_citation": 0,
+    "avg_seconds_per_call": 1.0,
+    "avg_tokens_in": 1453
+  }
+}
