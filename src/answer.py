@@ -1,6 +1,7 @@
 import json
 import re
 import time
+from rewrite import get_rewrite, search_with_rewrite
 
 from embed_chunks import load_index
 from embedders import Embedder
@@ -45,11 +46,18 @@ def parse_reply(text):
     return None
 
 
-def answer_question(question, embedder, chunks, embeddings):
-    results = search(question, embedder, chunks, embeddings, top_k=TOP_K)
-    top_score = results[0][1]
+def answer_question(question, embedder, chunks, embeddings, use_rewrite=True):
+    if use_rewrite:
+        rewritten = get_rewrite(question)
+        # the refusal cutoff still uses the ORIGINAL question's score
+        results, top_score = search_with_rewrite(question, rewritten, embedder, chunks, embeddings, TOP_K)
+    else:
+        rewritten = None
+        results = search(question, embedder, chunks, embeddings, top_k=TOP_K)
+        top_score = results[0][1]
     out = {
         "question": question,
+        "rewrite": rewritten,
         "model": llm.MODEL,
         "top_score": round(top_score, 3),
         "sources": [c["label"] for c, _ in results],

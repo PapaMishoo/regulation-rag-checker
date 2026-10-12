@@ -1,0 +1,1645 @@
+{
+  "run": "answers_v3_rewrite",
+  "date": "2026-10-12",
+  "config": {
+    "llm": "gemini-3.5-flash-lite",
+    "retrieval": "bge-base",
+    "n_questions": 66
+  },
+  "not_attempted": 0,
+  "summary": {
+    "n_real": 44,
+    "n_off_topic": 11,
+    "n_failed": 0,
+    "false_refusal_rate": 0.045454545454545456,
+    "right_article_in_passages": 0.9545454545454546,
+    "cited_expected_of_all_real": 0.9318181818181818,
+    "cited_expected_of_answered": 0.9761904761904762,
+    "off_topic_refused": 1.0,
+    "answers_with_invalid_citation": 0,
+    "avg_seconds_per_call": 1.3,
+    "avg_tokens_in": 1437
+  },
+  "heldout_summary": {
+    "n_real": 8,
+    "n_off_topic": 3,
+    "n_failed": 0,
+    "false_refusal_rate": 0.0,
+    "right_article_in_passages": 1.0,
+    "cited_expected_of_all_real": 1.0,
+    "cited_expected_of_answered": 1.0,
+    "off_topic_refused": 1.0,
+    "answers_with_invalid_citation": 0,
+    "avg_seconds_per_call": 1.3,
+    "avg_tokens_in": 1428
+  },
+  "details": [
+    {
+      "id": "q01",
+      "type": "direct",
+      "split": "dev",
+      "question": "When can a data subject require the erasure of their personal data?",
+      "expected": [
+        "GDPR - Article 17"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "A data subject has the right to obtain the erasure of their personal data without undue delay when specific grounds apply, such as the data no longer being necessary for the purposes collected, the withdrawal of consent with no other legal ground, or successful objection to the processing. Erasure is also required if the data were unlawfully processed, must be erased to comply with a legal obligation, or were collected in relation to the offer of information society services.",
+      "citations": [
+        "GDPR - Article 17"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 17",
+        "GDPR - Article 17",
+        "GDPR - Article 18",
+        "GDPR - Article 15",
+        "GDPR - Article 19"
+      ],
+      "top_score": 0.749,
+      "seconds": 1.35,
+      "tokens_in": 1446,
+      "tokens_out": 119,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q02",
+      "type": "direct",
+      "split": "dev",
+      "question": "How soon must a controller notify the supervisory authority of a personal data breach?",
+      "expected": [
+        "GDPR - Article 33"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "In the case of a personal data breach, the controller must notify the competent supervisory authority without undue delay and, where feasible, no later than 72 hours after becoming aware of it, unless the breach is unlikely to result in a risk to the rights and freedoms of natural persons. If the notification is not made within 72 hours, it must be accompanied by reasons for the delay.",
+      "citations": [
+        "GDPR - Article 33"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 33",
+        "GDPR - Article 34",
+        "GDPR - Article 33",
+        "GDPR - Article 60",
+        "GDPR - Article 12"
+      ],
+      "top_score": 0.845,
+      "seconds": 5.5,
+      "tokens_in": 1051,
+      "tokens_out": 96,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q03",
+      "type": "direct",
+      "split": "dev",
+      "question": "When is a data protection impact assessment required?",
+      "expected": [
+        "GDPR - Article 35"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "A data protection impact assessment is required prior to processing when a type of processing, particularly using new technologies, is likely to result in a high risk to the rights and freedoms of natural persons. It is specifically required in cases of systematic and extensive evaluation of personal aspects based on automated processing, large-scale processing of special categories of data or criminal convictions and offences, and systematic monitoring of a publicly accessible area on a large scale.",
+      "citations": [
+        "GDPR - Article 35"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 35",
+        "GDPR - Article 35",
+        "EU AI Act - Article 27",
+        "EU AI Act - Article 27",
+        "GDPR - Article 35"
+      ],
+      "top_score": 0.771,
+      "seconds": 4.28,
+      "tokens_in": 1481,
+      "tokens_out": 117,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q04",
+      "type": "direct",
+      "split": "dev",
+      "question": "What are the conditions for valid consent to data processing?",
+      "expected": [
+        "GDPR - Article 7"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "When processing is based on consent, the controller must be able to demonstrate that the data subject has consented to the processing [S1]. If the consent is given in a written declaration concerning other matters, the request must be clearly distinguishable, intelligible, easily accessible, and in clear and plain language [S1]. Furthermore, data subjects must be informed prior to giving consent and have the right to withdraw it at any time, with withdrawal being as easy as giving consent [S1].",
+      "citations": [
+        "GDPR - Article 7"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 7",
+        "GDPR - Article 21",
+        "GDPR - Article 6",
+        "GDPR - Article 5",
+        "GDPR - Article 18"
+      ],
+      "top_score": 0.784,
+      "seconds": 1.19,
+      "tokens_in": 1398,
+      "tokens_out": 129,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q05",
+      "type": "direct",
+      "split": "dev",
+      "question": "Which AI practices are prohibited?",
+      "expected": [
+        "EU AI Act - Article 5"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "The EU AI Act prohibits placing on the market, putting into service, or using AI systems that deploy subliminal, purposefully manipulative, or deceptive techniques to materially distort a person's behavior and cause significant harm [S1]. Additionally, it prohibits AI systems that exploit vulnerabilities of a natural person or specific group due to their age, disability, or social/economic situation in a manner that materially distorts behavior and causes or is likely to cause significant harm [S1].",
+      "citations": [
+        "EU AI Act - Article 5"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 5",
+        "EU AI Act - Article 55",
+        "EU AI Act - Article 53",
+        "EU AI Act - Article 79",
+        "EU AI Act - Article 60"
+      ],
+      "top_score": 0.801,
+      "seconds": 1.12,
+      "tokens_in": 1418,
+      "tokens_out": 112,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q06",
+      "type": "direct",
+      "split": "dev",
+      "question": "What obligations do providers of high-risk AI systems have?",
+      "expected": [
+        "EU AI Act - Article 16"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Providers of high-risk AI systems must ensure compliance with set requirements, indicate their contact information on the system or its documentation, maintain a quality management system, keep required documentation and automatically generated logs, and undergo relevant conformity assessment procedures before placing the system on the market S1. Additionally, they must draw up an EU declaration of conformity, affix the CE marking, comply with registration obligations, take necessary corrective actions, demonstrate conformity upon request, and ensure compliance with accessibility requirements S1.",
+      "citations": [
+        "EU AI Act - Article 16"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 16",
+        "EU AI Act - Article 26",
+        "EU AI Act - Article 25",
+        "EU AI Act - Article 24",
+        "EU AI Act - Article 17"
+      ],
+      "top_score": 0.788,
+      "seconds": 1.53,
+      "tokens_in": 1625,
+      "tokens_out": 113,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q07",
+      "type": "direct",
+      "split": "dev",
+      "question": "What is the maximum administrative fine for infringing the data protection rules?",
+      "expected": [
+        "GDPR - Article 83"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Infringements of certain provisions can be subject to administrative fines up to 10 000 000 EUR, or up to 2 % of the total worldwide annual turnover of the preceding financial year, whichever is higher [S5]. Other infringements can be subject to administrative fines up to 20 000 000 EUR, or up to 4 % of the total worldwide annual turnover of the preceding financial year, whichever is higher [S4].",
+      "citations": [
+        "GDPR - Article 83"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 83",
+        "EU AI Act - Article 100",
+        "EU AI Act - Article 99",
+        "GDPR - Article 83",
+        "GDPR - Article 83"
+      ],
+      "top_score": 0.715,
+      "seconds": 1.21,
+      "tokens_in": 1736,
+      "tokens_out": 140,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q08",
+      "type": "direct",
+      "split": "dev",
+      "question": "What transparency obligations apply to AI systems that interact directly with people?",
+      "expected": [
+        "EU AI Act - Article 50"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Providers must ensure that AI systems intended to interact directly with natural persons are designed and developed to inform those persons that they are interacting with an AI system. This requirement does not apply if it is obvious to a reasonably well-informed, observant, and circumspect person, or to AI systems authorized by law to detect, prevent, investigate, or prosecute criminal offences (unless available for the public to report a crime).",
+      "citations": [
+        "EU AI Act - Article 50"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 50",
+        "EU AI Act - Article 50",
+        "EU AI Act - Annex XII",
+        "EU AI Act - Article 13",
+        "EU AI Act - Article 55"
+      ],
+      "top_score": 0.81,
+      "seconds": 1.32,
+      "tokens_in": 1677,
+      "tokens_out": 115,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q09",
+      "type": "direct",
+      "split": "dev",
+      "question": "What must a risk management system for high-risk AI systems involve?",
+      "expected": [
+        "EU AI Act - Article 9"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "A risk management system for high-risk AI systems must be established as a continuous iterative process throughout the entire lifecycle of the system, requiring regular systematic review and updating [S1]. It comprises steps such as identifying and analyzing known and foreseeable risks to health, safety, or fundamental rights, estimating and evaluating risks under intended purpose and reasonably foreseeable misuse, evaluating other risks from post-market monitoring data, and adopting appropriate and targeted risk management measures [S1].",
+      "citations": [
+        "EU AI Act - Article 9"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 9",
+        "EU AI Act - Article 9",
+        "EU AI Act - Article 17",
+        "EU AI Act - Article 6",
+        "EU AI Act - Article 8"
+      ],
+      "top_score": 0.767,
+      "seconds": 1.15,
+      "tokens_in": 1561,
+      "tokens_out": 109,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q10",
+      "type": "direct",
+      "split": "dev",
+      "question": "Under what conditions is an AI system classified as high-risk?",
+      "expected": [
+        "EU AI Act - Article 6",
+        "EU AI Act - Annex III"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "An AI system is considered high-risk when it is intended to be used as a safety component of a product (or is itself a product) covered by the Union harmonisation legislation listed in Annex I, and is required to undergo a third-party conformity assessment pursuant to that legislation [S1]. Additionally, high-risk AI systems include those listed in the specific areas set out in Annex III, such as certain biometric, critical infrastructure, and education systems [S5].",
+      "citations": [
+        "EU AI Act - Article 6",
+        "EU AI Act - Annex III"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 6",
+        "EU AI Act - Article 80",
+        "EU AI Act - Article 9",
+        "EU AI Act - Article 9",
+        "EU AI Act - Annex III"
+      ],
+      "top_score": 0.795,
+      "seconds": 1.22,
+      "tokens_in": 1622,
+      "tokens_out": 117,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q11",
+      "type": "plain",
+      "split": "dev",
+      "question": "Can I ask a company for a copy of all the data it holds about me?",
+      "expected": [
+        "GDPR - Article 15"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Yes, under the GDPR, data subjects have the right to obtain confirmation as to whether their personal data is being processed and, where that is the case, access to that personal data. You can request this information from the controller.",
+      "citations": [
+        "GDPR - Article 15"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 15",
+        "GDPR - Article 21",
+        "GDPR - Article 80",
+        "GDPR - Article 20",
+        "GDPR - Article 18"
+      ],
+      "top_score": 0.612,
+      "seconds": 1.23,
+      "tokens_in": 1631,
+      "tokens_out": 78,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q12",
+      "type": "plain",
+      "split": "dev",
+      "question": "Can a company make important decisions about me using only an algorithm?",
+      "expected": [
+        "GDPR - Article 22"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Under the GDPR, data subjects have the right not to be subject to decisions based solely on automated processing, including profiling, that produce legal or similarly significant effects [S1]. However, this restriction does not apply if the decision is necessary for a contract, authorized by law, or based on the data subject's explicit consent [S1].",
+      "citations": [
+        "GDPR - Article 22"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 22",
+        "EU AI Act - Article 5",
+        "EU AI Act - Article 4a",
+        "EU AI Act - Article 4a",
+        "EU AI Act - Article 59"
+      ],
+      "top_score": 0.585,
+      "seconds": 1.11,
+      "tokens_in": 1601,
+      "tokens_out": 87,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q13",
+      "type": "plain",
+      "split": "dev",
+      "question": "Can I move my data from one service to another?",
+      "expected": [
+        "GDPR - Article 20"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Yes, you have the right to receive personal data concerning you that you provided to a controller in a structured, commonly used, and machine-readable format. You also have the right to transmit those data to another controller without hindrance, provided the processing is based on consent or a contract and is carried out by automated means.",
+      "citations": [
+        "GDPR - Article 20"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 20",
+        "GDPR - Article 15",
+        "GDPR - Article 16",
+        "GDPR - Article 18",
+        "GDPR - Article 15"
+      ],
+      "top_score": 0.589,
+      "seconds": 1.02,
+      "tokens_in": 1300,
+      "tokens_out": 81,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q14",
+      "type": "plain",
+      "split": "dev",
+      "question": "Do I have to tell people when an image or video is AI-generated?",
+      "expected": [
+        "EU AI Act - Article 50"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Providers of AI systems generating synthetic audio, images, videos, or text must ensure outputs are marked in a machine-readable format and detectable as artificially generated or manipulated. Additionally, deployers of AI systems generating deep fake image, audio, or video content must disclose that the content has been artificially generated or manipulated, with limited exceptions for artistic, creative, satirical, or fictional works, or when authorized by law for criminal investigations.",
+      "citations": [
+        "EU AI Act - Article 50"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 50",
+        "EU AI Act - Article 50",
+        "EU AI Act - Article 13",
+        "EU AI Act - Article 50",
+        "EU AI Act - Article 53"
+      ],
+      "top_score": 0.649,
+      "seconds": 1.26,
+      "tokens_in": 1600,
+      "tokens_out": 129,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q15",
+      "type": "plain",
+      "split": "dev",
+      "question": "Does my company need a data protection officer?",
+      "expected": [
+        "GDPR - Article 37"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "A controller or processor must designate a data protection officer if processing is carried out by a public authority or body, if their core activities consist of regular and systematic monitoring of data subjects on a large scale, or if their core activities consist of large-scale processing of special categories of data and criminal convictions and offences [S1]. In other cases, they may or must designate one if required by Union or Member State law [S1].",
+      "citations": [
+        "GDPR - Article 37"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 37",
+        "GDPR - Article 37",
+        "GDPR - Article 39",
+        "GDPR - Article 38",
+        "GDPR - Article 58"
+      ],
+      "top_score": 0.744,
+      "seconds": 1.23,
+      "tokens_in": 1453,
+      "tokens_out": 105,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q16",
+      "type": "plain",
+      "split": "dev",
+      "question": "Can I stop a company from using my data for marketing?",
+      "expected": [
+        "GDPR - Article 21"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Yes, you have the right to object at any time to the processing of your personal data for direct marketing purposes, which includes related profiling. Once you object, your personal data will no longer be processed for such purposes.",
+      "citations": [
+        "GDPR - Article 21"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 21",
+        "GDPR - Article 21",
+        "GDPR - Article 6",
+        "GDPR - Article 89",
+        "GDPR - Article 15"
+      ],
+      "top_score": 0.605,
+      "seconds": 1.06,
+      "tokens_in": 1308,
+      "tokens_out": 61,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q17",
+      "type": "plain",
+      "split": "dev",
+      "question": "At what age can a child agree to data processing on their own?",
+      "expected": [
+        "GDPR - Article 8"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "When information society services are offered directly to a child, the processing of their personal data is lawful if the child is at least 16 years old. However, Member States may establish a lower age by law, provided that the age is not below 13 years.",
+      "citations": [
+        "GDPR - Article 8"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 8",
+        "GDPR - Article 12",
+        "GDPR - Article 7",
+        "GDPR - Article 6",
+        "GDPR - Article 57"
+      ],
+      "top_score": 0.687,
+      "seconds": 1.14,
+      "tokens_in": 1501,
+      "tokens_out": 87,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q18",
+      "type": "plain",
+      "split": "dev",
+      "question": "Can a company send customer data to a server outside the EU?",
+      "expected": [
+        "GDPR - Article 44",
+        "GDPR - Article 45",
+        "GDPR - Article 46"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Personal data may be transferred to a third country or international organisation if the Commission has decided that it ensures an adequate level of protection, or if the controller or processor provides appropriate safeguards with enforceable data subject rights and effective legal remedies. Any such transfer must comply with the conditions laid down in the regulation to ensure that the level of protection is not undermined.",
+      "citations": [
+        "GDPR - Article 45",
+        "GDPR - Article 46",
+        "GDPR - Article 44"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 45",
+        "GDPR - Article 15",
+        "GDPR - Article 46",
+        "GDPR - Article 44",
+        "GDPR - Article 50"
+      ],
+      "top_score": 0.625,
+      "seconds": 1.03,
+      "tokens_in": 1207,
+      "tokens_out": 94,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q19",
+      "type": "plain",
+      "split": "dev",
+      "question": "Do employees need training to use AI tools at work?",
+      "expected": [
+        "EU AI Act - Article 4"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Providers and deployers of AI systems must take measures to support the development of AI literacy for their staff and other persons operating AI on their behalf [S1]. This obligation takes into account their technical knowledge, experience, education, training, and the context of use, though it does not require guaranteeing a specific level of individual AI literacy [S1]. Additionally, deployers of high-risk AI systems must assign human oversight to natural persons who have the necessary competence, training, authority, and support [S4].",
+      "citations": [
+        "EU AI Act - Article 4",
+        "EU AI Act - Article 26"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 4",
+        "EU AI Act - Article 3",
+        "EU AI Act - Article 13",
+        "EU AI Act - Article 26",
+        "EU AI Act - Article 50"
+      ],
+      "top_score": 0.596,
+      "seconds": 1.44,
+      "tokens_in": 1523,
+      "tokens_out": 142,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q20",
+      "type": "plain",
+      "split": "dev",
+      "question": "Can I get compensation if a company mishandled my data?",
+      "expected": [
+        "GDPR - Article 82"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Yes, any person who has suffered material or non-material damage due to an infringement of the regulation has the right to receive compensation from the controller or processor for the damage suffered [S1].",
+      "citations": [
+        "GDPR - Article 82"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 82",
+        "GDPR - Article 82",
+        "GDPR - Article 79",
+        "GDPR - Article 18",
+        "GDPR - Article 15"
+      ],
+      "top_score": 0.638,
+      "seconds": 0.95,
+      "tokens_in": 1389,
+      "tokens_out": 57,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q21",
+      "type": "plain",
+      "split": "dev",
+      "question": "Who is responsible when a company uses AI built by another vendor?",
+      "expected": [
+        "EU AI Act - Article 25",
+        "EU AI Act - Article 26"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "A deployer of a high-risk AI system must take appropriate technical and organisational measures to use the system according to the instructions for use [S1]. Furthermore, a distributor, importer, deployer, or other third-party is considered a provider of a high-risk AI system and subject to provider obligations if they put their name or trademark on it, make a substantial modification, or modify its intended purpose to make it a high-risk AI system [S2].",
+      "citations": [
+        "EU AI Act - Article 26",
+        "EU AI Act - Article 25"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 26",
+        "EU AI Act - Article 25",
+        "EU AI Act - Article 50",
+        "EU AI Act - Article 4",
+        "EU AI Act - Article 27"
+      ],
+      "top_score": 0.685,
+      "seconds": 1.14,
+      "tokens_in": 1560,
+      "tokens_out": 134,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q22",
+      "type": "multi",
+      "split": "dev",
+      "question": "What information must be given to people when their personal data is collected?",
+      "expected": [
+        "GDPR - Article 13",
+        "GDPR - Article 14"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "When personal data are collected directly from the data subject, the controller must provide the identity and contact details of the controller and its representative, the contact details of the data protection officer, the processing purposes and legal basis, any recipients or categories of recipients, and details regarding intended transfers to third countries or international organizations with relevant safeguards [S1].",
+      "citations": [
+        "GDPR - Article 13"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 13",
+        "GDPR - Article 14",
+        "GDPR - Article 86",
+        "GDPR - Article 21",
+        "GDPR - Article 13"
+      ],
+      "top_score": 0.77,
+      "seconds": 1.31,
+      "tokens_in": 1089,
+      "tokens_out": 86,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q23",
+      "type": "multi",
+      "split": "dev",
+      "question": "How must a company protect the personal data it processes?",
+      "expected": [
+        "GDPR - Article 32",
+        "GDPR - Article 25"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Controllers and processors must implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk, taking into account factors like the state of the art and implementation costs [S1]. Measures may include pseudonymisation and encryption, ensuring ongoing confidentiality, integrity, availability, and resilience of systems, and the ability to restore data access following an incident [S1]. Additionally, controllers must implement measures for data protection by design and by default to ensure only necessary personal data are processed [S2].",
+      "citations": [
+        "GDPR - Article 32",
+        "GDPR - Article 25"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 32",
+        "GDPR - Article 25",
+        "GDPR - Article 70",
+        "GDPR - Article 5",
+        "GDPR - Article 35"
+      ],
+      "top_score": 0.7,
+      "seconds": 1.27,
+      "tokens_in": 1508,
+      "tokens_out": 121,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q24",
+      "type": "multi",
+      "split": "dev",
+      "question": "What must a provider do before placing a high-risk AI system on the market?",
+      "expected": [
+        "EU AI Act - Article 43",
+        "EU AI Act - Article 47",
+        "EU AI Act - Article 48",
+        "EU AI Act - Article 49"
+      ],
+      "status": "refused_by_model",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 42",
+        "EU AI Act - Article 25",
+        "EU AI Act - Article 25",
+        "EU AI Act - Article 43",
+        "EU AI Act - Article 23"
+      ],
+      "top_score": 0.739,
+      "seconds": 0.94,
+      "tokens_in": 1665,
+      "tokens_out": 15,
+      "in_passages": true,
+      "cited_expected": false,
+      "false_refusal": true
+    },
+    {
+      "id": "q25",
+      "type": "multi",
+      "split": "dev",
+      "question": "What penalties apply if someone uses a banned AI practice?",
+      "expected": [
+        "EU AI Act - Article 99"
+      ],
+      "status": "refused_by_model",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 5",
+        "EU AI Act - Article 100",
+        "EU AI Act - Article 101",
+        "EU AI Act - Article 80",
+        "EU AI Act - Article 75c"
+      ],
+      "top_score": 0.73,
+      "seconds": 1.2,
+      "tokens_in": 1671,
+      "tokens_out": 15,
+      "in_passages": false,
+      "cited_expected": false,
+      "false_refusal": true
+    },
+    {
+      "id": "q26",
+      "type": "multi",
+      "split": "dev",
+      "question": "What must a company agree with an outside service that processes personal data for it?",
+      "expected": [
+        "GDPR - Article 28"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "When processing is carried out on behalf of a controller, it must be governed by a binding contract or other legal act under Union or Member State law [S2]. This contract or legal act must set out details such as the subject-matter, duration, nature and purpose of the processing, the type of personal data and categories of data subjects, and the obligations and rights of the controller [S2]. It must also stipulate that the processor processes personal data only on documented instructions from the controller [S2].",
+      "citations": [
+        "GDPR - Article 28"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 29",
+        "GDPR - Article 28",
+        "GDPR - Article 28",
+        "GDPR - Article 28",
+        "GDPR - Article 6"
+      ],
+      "top_score": 0.654,
+      "seconds": 1.16,
+      "tokens_in": 1384,
+      "tokens_out": 136,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q27",
+      "type": "multi",
+      "split": "dev",
+      "question": "What records of data processing do organizations have to keep?",
+      "expected": [
+        "GDPR - Article 30"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Under the GDPR, each controller and, where applicable, the controller's representative must maintain a record of processing activities under their responsibility containing contact details, purposes of processing, categories of data subjects and personal data, and recipients [S1]. Additionally, each processor and, where applicable, the processor's representative must maintain a record of all categories of processing activities carried out on behalf of a controller [S1].",
+      "citations": [
+        "GDPR - Article 30"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 30",
+        "GDPR - Article 24",
+        "GDPR - Article 29",
+        "GDPR - Article 28",
+        "GDPR - Article 6"
+      ],
+      "top_score": 0.691,
+      "seconds": 1.14,
+      "tokens_in": 1234,
+      "tokens_out": 101,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q28",
+      "type": "out_of_scope",
+      "split": "dev",
+      "question": "What is the best pizza in Rome?",
+      "expected": [],
+      "status": "refused_low_score",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 98",
+        "EU AI Act - Article 60a",
+        "EU AI Act - Article 84",
+        "EU AI Act - Article 17",
+        "GDPR - Article 42"
+      ],
+      "top_score": 0.341,
+      "seconds": 0.0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "correctly_refused": true
+    },
+    {
+      "id": "q29",
+      "type": "out_of_scope",
+      "split": "dev",
+      "question": "Who won the football World Cup in 2022?",
+      "expected": [],
+      "status": "refused_low_score",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 96",
+        "GDPR - Article 65",
+        "GDPR - Article 56",
+        "GDPR - Article 99",
+        "GDPR - Article 56"
+      ],
+      "top_score": 0.428,
+      "seconds": 0.0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "correctly_refused": true
+    },
+    {
+      "id": "q30",
+      "type": "out_of_scope",
+      "split": "dev",
+      "question": "How do I train a neural network in Python?",
+      "expected": [],
+      "status": "refused_low_score",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 10",
+        "EU AI Act - Article 53",
+        "EU AI Act - Annex XI",
+        "EU AI Act - Annex XIII",
+        "EU AI Act - Annex IV"
+      ],
+      "top_score": 0.51,
+      "seconds": 0.0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "correctly_refused": true
+    },
+    {
+      "id": "q31",
+      "type": "out_of_scope",
+      "split": "dev",
+      "question": "What is the minimum wage in Germany?",
+      "expected": [],
+      "status": "refused_low_score",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 88",
+        "EU AI Act - Article 63",
+        "EU AI Act - Article 28",
+        "EU AI Act - Article 33",
+        "GDPR - Article 54"
+      ],
+      "top_score": 0.425,
+      "seconds": 0.0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "correctly_refused": true
+    },
+    {
+      "id": "q32",
+      "type": "out_of_scope",
+      "split": "dev",
+      "question": "What does HIPAA require for medical records in the United States?",
+      "expected": [],
+      "status": "refused_by_model",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 9",
+        "GDPR - Article 9",
+        "GDPR - Article 9",
+        "GDPR - Article 89",
+        "GDPR - Article 32"
+      ],
+      "top_score": 0.653,
+      "seconds": 0.87,
+      "tokens_in": 1356,
+      "tokens_out": 15,
+      "correctly_refused": true
+    },
+    {
+      "id": "q33",
+      "type": "out_of_scope",
+      "split": "dev",
+      "question": "What does the California CCPA say about selling personal data?",
+      "expected": [],
+      "status": "refused_by_model",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 18",
+        "GDPR - Article 9",
+        "GDPR - Article 58",
+        "GDPR - Article 21",
+        "GDPR - Article 9"
+      ],
+      "top_score": 0.592,
+      "seconds": 1.02,
+      "tokens_in": 1268,
+      "tokens_out": 15,
+      "correctly_refused": true
+    },
+    {
+      "id": "q34",
+      "type": "direct",
+      "split": "dev",
+      "question": "What are the principles relating to the processing of personal data?",
+      "expected": [
+        "GDPR - Article 5"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Personal data must be processed lawfully, fairly, and transparently, and collected for specified, explicit, and legitimate purposes without incompatible further processing [S1]. Furthermore, data must be adequate, relevant, limited to what is necessary, accurate and kept up to date, and kept in a form permitting identification for no longer than necessary [S1].",
+      "citations": [
+        "GDPR - Article 5"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 5",
+        "GDPR - Article 21",
+        "GDPR - Article 10",
+        "GDPR - Article 9",
+        "GDPR - Article 9"
+      ],
+      "top_score": 0.815,
+      "seconds": 1.04,
+      "tokens_in": 1050,
+      "tokens_out": 87,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q35",
+      "type": "direct",
+      "split": "dev",
+      "question": "What are the lawful bases for processing personal data?",
+      "expected": [
+        "GDPR - Article 6"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Processing of personal data is lawful only if at least one of the following conditions applies: the data subject has given consent, processing is necessary for a contract, for compliance with a legal obligation, to protect vital interests, for a task in the public interest or official authority, or for legitimate interests pursued by the controller or a third party unless overridden by the data subject's rights and freedoms [S1].",
+      "citations": [
+        "GDPR - Article 6"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 6",
+        "GDPR - Article 21",
+        "GDPR - Article 10",
+        "GDPR - Article 5",
+        "GDPR - Article 18"
+      ],
+      "top_score": 0.749,
+      "seconds": 1.16,
+      "tokens_in": 1252,
+      "tokens_out": 114,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q37",
+      "type": "direct",
+      "split": "dev",
+      "question": "What tasks does a data protection officer have?",
+      "expected": [
+        "GDPR - Article 39"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "The data protection officer's tasks include informing and advising the controller, processor, and employees of their data protection obligations, monitoring compliance with regulations and internal policies, and providing advice on data protection impact assessments S1. Additionally, the data protection officer must cooperate and act as a contact point with the supervisory authority on processing issues S1.",
+      "citations": [
+        "GDPR - Article 39"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 39",
+        "GDPR - Article 38",
+        "GDPR - Article 37",
+        "GDPR - Article 37",
+        "GDPR - Article 57"
+      ],
+      "top_score": 0.855,
+      "seconds": 1.28,
+      "tokens_in": 1408,
+      "tokens_out": 84,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q38",
+      "type": "direct",
+      "split": "dev",
+      "question": "When must a data breach be communicated to the affected individuals?",
+      "expected": [
+        "GDPR - Article 34"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "When a personal data breach is likely to result in a high risk to the rights and freedoms of natural persons, the controller must communicate it to the data subject without undue delay. However, this communication is not required if the controller has implemented appropriate technical protection measures like encryption, taken subsequent measures to remove the high risk, or if it would involve disproportionate effort.",
+      "citations": [
+        "GDPR - Article 34"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 34",
+        "GDPR - Article 33",
+        "GDPR - Article 34",
+        "GDPR - Article 12",
+        "GDPR - Article 33"
+      ],
+      "top_score": 0.761,
+      "seconds": 1.23,
+      "tokens_in": 1210,
+      "tokens_out": 89,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q40",
+      "type": "direct",
+      "split": "dev",
+      "question": "What is the right to rectification of inaccurate personal data?",
+      "expected": [
+        "GDPR - Article 16"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "The data subject has the right to obtain from the controller the rectification of inaccurate personal data concerning them without undue delay. Additionally, taking into account the purposes of the processing, they have the right to have incomplete personal data completed, including by providing a supplementary statement.",
+      "citations": [
+        "GDPR - Article 16"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 16",
+        "GDPR - Article 19",
+        "GDPR - Article 5",
+        "GDPR - Article 15",
+        "GDPR - Article 18"
+      ],
+      "top_score": 0.819,
+      "seconds": 1.18,
+      "tokens_in": 1142,
+      "tokens_out": 84,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q41",
+      "type": "plain",
+      "split": "dev",
+      "question": "Can I ask a company to pause the use of my data while a dispute is being sorted out?",
+      "expected": [
+        "GDPR - Article 18"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Yes, you have the right to obtain the restriction of processing from a controller when the accuracy of the personal data is contested, enabling verification, or when processing is unlawful and you request restriction instead of erasure [S1]. Additionally, you can request restriction if you have objected to processing pending verification of legitimate grounds, or if the controller no longer needs the data but you require it for legal claims [S1].",
+      "citations": [
+        "GDPR - Article 18"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 18",
+        "GDPR - Article 6",
+        "GDPR - Article 14",
+        "GDPR - Article 85",
+        "GDPR - Article 79"
+      ],
+      "top_score": 0.642,
+      "seconds": 1.1,
+      "tokens_in": 1535,
+      "tokens_out": 115,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q43",
+      "type": "plain",
+      "split": "dev",
+      "question": "Can I take a company to court over mishandling my personal data?",
+      "expected": [
+        "GDPR - Article 79",
+        "GDPR - Article 82"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Yes, each data subject has the right to an effective judicial remedy where they consider that their rights under the GDPR have been infringed as a result of the processing of their personal data in non-compliance with the regulation [S1]. Proceedings against a controller or processor are brought before the courts of the Member State where they have an establishment, or alternatively where the data subject has their habitual residence, unless the controller or processor is a public authority acting in the exercise of its public powers [S1].",
+      "citations": [
+        "GDPR - Article 79"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 79",
+        "GDPR - Article 78",
+        "GDPR - Article 82",
+        "GDPR - Article 82",
+        "GDPR - Article 77"
+      ],
+      "top_score": 0.613,
+      "seconds": 1.29,
+      "tokens_in": 1168,
+      "tokens_out": 117,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q44",
+      "type": "plain",
+      "split": "dev",
+      "question": "Do companies based outside the EU have to follow the GDPR?",
+      "expected": [
+        "GDPR - Article 3",
+        "GDPR - Article 27"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "The GDPR applies to a controller or processor not established in the Union if they process personal data of data subjects who are in the Union, provided the activities relate to offering goods or services to them or monitoring their behavior within the Union. Additionally, it applies to controllers not established in the Union but in a place where Member State law applies by virtue of public international law.",
+      "citations": [
+        "GDPR - Article 3"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 2",
+        "GDPR - Article 3",
+        "GDPR - Article 47",
+        "GDPR - Article 47",
+        "GDPR - Article 96"
+      ],
+      "top_score": 0.7,
+      "seconds": 1.53,
+      "tokens_in": 1280,
+      "tokens_out": 106,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q46",
+      "type": "plain",
+      "split": "dev",
+      "question": "Who is responsible when two companies decide together how to use people's data?",
+      "expected": [
+        "GDPR - Article 26"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "When two or more controllers jointly determine the purposes and means of processing, they are considered joint controllers. They must determine their respective responsibilities for GDPR compliance in a transparent manner by means of an arrangement between them, though a data subject may still exercise their rights against each of the controllers regardless of the arrangement's terms.",
+      "citations": [
+        "GDPR - Article 26"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 26",
+        "GDPR - Article 24",
+        "GDPR - Article 30",
+        "GDPR - Article 29",
+        "GDPR - Article 62"
+      ],
+      "top_score": 0.628,
+      "seconds": 1.17,
+      "tokens_in": 1232,
+      "tokens_out": 97,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q47",
+      "type": "direct",
+      "split": "dev",
+      "question": "What does the AI Act require for human oversight of high-risk AI systems?",
+      "expected": [
+        "EU AI Act - Article 14"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "High-risk AI systems must be designed and developed with appropriate human-machine interface tools to enable effective oversight by natural persons while in use, aiming to prevent or minimize health, safety, or fundamental rights risks. These oversight measures must be commensurate with the risks, autonomy level, and context of use, and can be built into the system by the provider or implemented by the deployer. Additionally, deployers are required to assign human oversight to natural persons who possess the necessary competence, training, authority, and support.",
+      "citations": [
+        "EU AI Act - Article 14",
+        "EU AI Act - Article 26"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 14",
+        "EU AI Act - Article 9",
+        "EU AI Act - Article 26",
+        "EU AI Act - Article 13",
+        "EU AI Act - Article 17"
+      ],
+      "top_score": 0.827,
+      "seconds": 1.62,
+      "tokens_in": 1420,
+      "tokens_out": 124,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q49",
+      "type": "direct",
+      "split": "dev",
+      "question": "What technical documentation must a provider prepare for a high-risk AI system?",
+      "expected": [
+        "EU AI Act - Article 11"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "The technical documentation for a high-risk AI system must be drawn up before the system is placed on the market or put into service and kept up-to-date [S1]. It must demonstrate compliance with the requirements set out in Section 2 and provide national competent authorities and notified bodies with clear and comprehensive information to assess this compliance [S1]. At a minimum, it must contain the elements set out in Annex IV [S1]. Additionally, SMEs, start-ups, and SMCs may provide these elements in a simplified manner using a form established by the Commission [S1].",
+      "citations": [
+        "EU AI Act - Article 11"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 11",
+        "EU AI Act - Article 16",
+        "EU AI Act - Article 25",
+        "EU AI Act - Article 17",
+        "EU AI Act - Annex XI"
+      ],
+      "top_score": 0.758,
+      "seconds": 1.25,
+      "tokens_in": 1708,
+      "tokens_out": 137,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q50",
+      "type": "plain",
+      "split": "dev",
+      "question": "Do high-risk AI systems have to keep records of what they do?",
+      "expected": [
+        "EU AI Act - Article 12",
+        "EU AI Act - Article 19"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Yes, high-risk AI systems must technically allow for the automatic recording of events, or logs, over the lifetime of the system S1. Providers and deployers of these systems must keep these automatically generated logs for a period appropriate to the intended purpose, which is at least six months, unless otherwise provided by applicable Union or national law S2, S3.",
+      "citations": [
+        "EU AI Act - Article 12",
+        "EU AI Act - Article 19",
+        "EU AI Act - Article 26"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 12",
+        "EU AI Act - Article 19",
+        "EU AI Act - Article 26",
+        "EU AI Act - Article 9",
+        "EU AI Act - Article 13"
+      ],
+      "top_score": 0.788,
+      "seconds": 1.25,
+      "tokens_in": 1310,
+      "tokens_out": 117,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q52",
+      "type": "direct",
+      "split": "dev",
+      "question": "What obligations do providers of general-purpose AI models have?",
+      "expected": [
+        "EU AI Act - Article 53"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Providers of general-purpose AI models must draw up and keep up-to-date technical documentation, and make information and documentation available to downstream AI system providers [S1]. They are also required to put in place a policy to comply with Union copyright law and to draw up and make publicly available a detailed summary about the training content [S1, S4]. Furthermore, they must cooperate as necessary with the Commission and national competent authorities [S4].",
+      "citations": [
+        "EU AI Act - Article 53"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 53",
+        "EU AI Act - Article 55",
+        "EU AI Act - Article 54",
+        "EU AI Act - Article 53",
+        "EU AI Act - Article 101"
+      ],
+      "top_score": 0.788,
+      "seconds": 1.19,
+      "tokens_in": 1701,
+      "tokens_out": 113,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q53",
+      "type": "direct",
+      "split": "dev",
+      "question": "What must deployers assess about fundamental rights before using certain high-risk AI systems?",
+      "expected": [
+        "EU AI Act - Article 27"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Prior to deploying certain high-risk AI systems, applicable deployers must perform a fundamental rights impact assessment that includes a description of the processes and the time period and frequency of use [S1]. The assessment must also identify the affected categories of natural persons and groups, specific risks of harm, the implementation of human oversight measures, and the measures to be taken if those risks materialize, including internal governance and complaint mechanisms [S1].",
+      "citations": [
+        "EU AI Act - Article 27"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 27",
+        "EU AI Act - Article 26",
+        "EU AI Act - Article 27",
+        "EU AI Act - Article 13",
+        "EU AI Act - Article 13"
+      ],
+      "top_score": 0.805,
+      "seconds": 1.15,
+      "tokens_in": 1657,
+      "tokens_out": 104,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q55",
+      "type": "direct",
+      "split": "dev",
+      "question": "What does the AI Act say about monitoring AI systems after they have been placed on the market?",
+      "expected": [
+        "EU AI Act - Article 72"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "Providers of high-risk AI systems must establish and document a proportionate post-market monitoring system to actively and systematically collect, document, and analyse relevant data on system performance throughout its lifetime [S1]. This system must be based on a post-market monitoring plan that forms part of the technical documentation [S1]. Additionally, 'post-market monitoring system' refers to all activities carried out by providers to review experience gained from AI systems placed on the market or put into service to identify any need for immediate corrective or preventive actions [S2].",
+      "citations": [
+        "EU AI Act - Article 72",
+        "EU AI Act - Article 3"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 72",
+        "EU AI Act - Article 3",
+        "EU AI Act - Article 79",
+        "EU AI Act - Article 111",
+        "EU AI Act - Article 74"
+      ],
+      "top_score": 0.803,
+      "seconds": 1.33,
+      "tokens_in": 1784,
+      "tokens_out": 148,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q56",
+      "type": "plain",
+      "split": "dev",
+      "question": "How do AI regulatory sandboxes work?",
+      "expected": [
+        "EU AI Act - Article 57"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "An AI regulatory sandbox provides a controlled environment set up by a competent authority for a limited time, allowing providers to develop, train, validate, and test innovative AI systems pursuant to a specific sandbox plan [S3, S4]. They offer guidance, supervision, and support to help identify risks, test mitigation measures, and facilitate regulatory learning, and they may also include supervised testing in real-world conditions [S2, S3, S4].",
+      "citations": [
+        "EU AI Act - Article 58",
+        "EU AI Act - Article 57",
+        "EU AI Act - Article 3"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 57",
+        "EU AI Act - Article 58",
+        "EU AI Act - Article 57",
+        "EU AI Act - Article 3",
+        "EU AI Act - Article 57"
+      ],
+      "top_score": 0.773,
+      "seconds": 1.29,
+      "tokens_in": 1473,
+      "tokens_out": 116,
+      "in_passages": true,
+      "cited_expected": true,
+      "false_refusal": false
+    },
+    {
+      "id": "q58",
+      "type": "multi",
+      "split": "dev",
+      "question": "What must a company do to show that it complies with data protection rules?",
+      "expected": [
+        "GDPR - Article 24",
+        "GDPR - Article 5"
+      ],
+      "status": "answered",
+      "failed": false,
+      "answer": "A controller or processor may use adherence to an approved code of conduct or an approved certification mechanism as an element to demonstrate compliance with the regulation's requirements. Additionally, data protection certification mechanisms, seals, or marks can be established to demonstrate compliance of processing operations.",
+      "citations": [
+        "GDPR - Article 32",
+        "GDPR - Article 42"
+      ],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 70",
+        "GDPR - Article 47",
+        "GDPR - Article 39",
+        "GDPR - Article 32",
+        "GDPR - Article 42"
+      ],
+      "top_score": 0.675,
+      "seconds": 1.1,
+      "tokens_in": 1419,
+      "tokens_out": 90,
+      "in_passages": false,
+      "cited_expected": false,
+      "false_refusal": false
+    },
+    {
+      "id": "q59",
+      "type": "out_of_scope",
+      "split": "dev",
+      "question": "What penalties apply under the UK Data Protection Act 2018?",
+      "expected": [],
+      "status": "refused_by_model",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 100",
+        "GDPR - Article 83",
+        "EU AI Act - Article 100",
+        "GDPR - Article 83",
+        "GDPR - Article 84"
+      ],
+      "top_score": 0.694,
+      "seconds": 0.92,
+      "tokens_in": 1415,
+      "tokens_out": 15,
+      "correctly_refused": true
+    },
+    {
+      "id": "q61",
+      "type": "out_of_scope",
+      "split": "dev",
+      "question": "What does Canada's PIPEDA require for consent?",
+      "expected": [],
+      "status": "refused_by_model",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 45",
+        "GDPR - Article 15",
+        "GDPR - Article 46",
+        "GDPR - Article 70",
+        "GDPR - Article 45"
+      ],
+      "top_score": 0.602,
+      "seconds": 0.97,
+      "tokens_in": 1393,
+      "tokens_out": 15,
+      "correctly_refused": true
+    },
+    {
+      "id": "q62",
+      "type": "out_of_scope",
+      "split": "dev",
+      "question": "What rules does China impose on generative AI services?",
+      "expected": [],
+      "status": "refused_by_model",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "EU AI Act - Article 50",
+        "EU AI Act - Article 53",
+        "EU AI Act - Annex XIV",
+        "EU AI Act - Article 50",
+        "EU AI Act - Article 53"
+      ],
+      "top_score": 0.616,
+      "seconds": 0.92,
+      "tokens_in": 1586,
+      "tokens_out": 15,
+      "correctly_refused": true
+    },
+    {
+      "id": "q64",
+      "type": "out_of_scope",
+      "split": "dev",
+      "question": "What is a good recipe for chocolate cake?",
+      "expected": [],
+      "status": "refused_low_score",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 30",
+        "GDPR - Article 6",
+        "GDPR - Article 57",
+        "GDPR - Article 9",
+        "GDPR - Article 6"
+      ],
+      "top_score": 0.401,
+      "seconds": 0.0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "correctly_refused": true
+    },
+    {
+      "id": "q65",
+      "type": "out_of_scope",
+      "split": "dev",
+      "question": "What is the capital of Australia?",
+      "expected": [],
+      "status": "refused_low_score",
+      "failed": false,
+      "answer": "The documents I have (the GDPR and the EU AI Act) don't cover this question.",
+      "citations": [],
+      "bad_citations": [],
+      "sources": [
+        "GDPR - Article 45",
+        "GDPR - Article 45",
+        "GDPR - Article 83",
+        "EU AI Act - Article 5",
+        "GDPR - Article 4"
+      ],
+      "top_score": 0.4,
+      "seconds": 0.0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "correctly_refused": true
+    }
+  ],
+  "heldout_details": "hidden"
+}
