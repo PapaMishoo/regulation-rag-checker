@@ -1,0 +1,8 @@
+[
+  {"id": "q02", "facts": [["72 hours"], ["unlikely to result in a risk"], ["delay"]]},
+  {"id": "q05", "facts": [["subliminal"], ["vulnerabilit"], ["social behaviour", "social scoring"], ["facial images"], ["emotions", "emotion recognition"], ["biometric"]]},
+  {"id": "q34", "facts": [["lawful"], ["purpose", "specified, explicit"], ["necessary", "minimi"], ["accura"], ["longer than", "storage limitation"], ["secur"]]},
+  {"id": "q35", "facts": [["consent"], ["contract"], ["legal obligation"], ["vital interests"], ["public interest"], ["legitimate interests"]]},
+  {"id": "q03", "facts": [["profiling", "automated processing"], ["special categories"], ["publicly accessible"]]},
+  {"id": "q15", "facts": [["public authority", "public authorities"], ["systematic monitoring"], ["special categories"]]}
+]
