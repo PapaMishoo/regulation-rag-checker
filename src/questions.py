@@ -15,3 +15,12 @@ def load_questions():
     if len(ids) != len(set(ids)):
         raise SystemExit("Duplicate question ids found in the question files.")
     return questions
+
+FRESH_PATH = Path("eval/questions_fresh.json")
+
+
+def load_fresh():
+    questions = json.loads(FRESH_PATH.read_text(encoding="utf-8"))
+    for q in questions:
+        q.setdefault("split", "fresh")
+    return questions

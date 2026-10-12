@@ -1,0 +1,19 @@
+[
+  {"id": "f01", "type": "plain", "question": "Is a photo of someone or an IP address counted as personal data?", "expected": ["GDPR - Article 4"]},
+  {"id": "f02", "type": "plain", "question": "How long does a company have to reply when I ask to see my data?", "expected": ["GDPR - Article 12"]},
+  {"id": "f03", "type": "plain", "question": "Do companies have to build privacy into their apps and websites from the start?", "expected": ["GDPR - Article 25"]},
+  {"id": "f04", "type": "plain", "question": "If a company passed my data on to other firms, do those firms have to be told when I ask for deletion?", "expected": ["GDPR - Article 19", "GDPR - Article 17"]},
+  {"id": "f05", "type": "plain", "question": "What powers does a data protection regulator have to check up on a company?", "expected": ["GDPR - Article 58"]},
+  {"id": "f06", "type": "plain", "question": "Can my data be sent to a country without strong privacy laws if I clearly agree to it?", "expected": ["GDPR - Article 49"]},
+  {"id": "f07", "type": "plain", "question": "Can a charity or consumer group make a complaint on my behalf?", "expected": ["GDPR - Article 80"]},
+  {"id": "f08", "type": "direct", "question": "What does the AI Act mean by an AI system?", "expected": ["EU AI Act - Article 3"]},
+  {"id": "f09", "type": "plain", "question": "What information must the maker of a risky AI system give to the businesses that use it?", "expected": ["EU AI Act - Article 13"]},
+  {"id": "f10", "type": "plain", "question": "How accurate and secure does a high-risk AI system have to be?", "expected": ["EU AI Act - Article 15"]},
+  {"id": "f11", "type": "plain", "question": "Does the company that builds a risky AI system need a formal quality control process?", "expected": ["EU AI Act - Article 17"]},
+  {"id": "f12", "type": "plain", "question": "What extra duties apply to the most powerful general-purpose AI models?", "expected": ["EU AI Act - Article 55", "EU AI Act - Article 51"]},
+  {"id": "f13", "type": "direct", "question": "When do the AI Act's rules start to apply?", "expected": ["EU AI Act - Article 113"]},
+  {"id": "f14", "type": "out_of_scope", "question": "What does Japan's APPI say about sharing personal data with third parties?", "expected": []},
+  {"id": "f15", "type": "out_of_scope", "question": "What does the EU Digital Services Act require from online platforms?", "expected": []},
+  {"id": "f16", "type": "out_of_scope", "question": "What must companies report under the NIS2 cybersecurity directive?", "expected": []},
+  {"id": "f17", "type": "out_of_scope", "question": "How do I make a good cup of tea?", "expected": []}
+]

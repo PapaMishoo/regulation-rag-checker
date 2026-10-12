@@ -1,10 +1,11 @@
 import sys
 
 from embed_chunks import load_chunks
-from questions import load_questions
+from questions import load_fresh, load_questions
 
-# Optional: start from a given question, like  python src/show_key.py q34
-start = sys.argv[1] if len(sys.argv) > 1 else None
+args = [a for a in sys.argv[1:] if not a.startswith("--")]
+fresh = "--fresh" in sys.argv
+start = args[0] if args else None
 started = start is None
 
 first_chunk = {}
@@ -12,7 +13,7 @@ for chunk in load_chunks():
     first_chunk.setdefault(chunk["label"], chunk["text"])
 
 not_found = 0
-for q in load_questions():
+for q in (load_fresh() if fresh else load_questions()):
     if q["id"] == start:
         started = True
     if not started:
