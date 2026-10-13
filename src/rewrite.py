@@ -31,8 +31,9 @@ CACHE_PATH = Path("eval") / (
 _cache = None
 
 
-def get_rewrite(question):
-    """Return the rewritten question, calling the model only if it hasn't been done before."""
+def get_rewrite(question, save=True):
+    """Return the rewritten question, calling the model only if it hasn't been done before.
+    With save=False a new rewrite is returned but not written to the repo's cache file."""
     global _cache
     if _cache is None:
         _cache = json.loads(CACHE_PATH.read_text(encoding="utf-8")) if CACHE_PATH.exists() else {}
@@ -45,6 +46,8 @@ def get_rewrite(question):
                 rewritten = json.loads(match.group(0)).get("rewritten") or question
             except json.JSONDecodeError:
                 pass
+        if not save:
+            return rewritten
         _cache[question] = rewritten
         CACHE_PATH.write_text(json.dumps(_cache, ensure_ascii=False, indent=2), encoding="utf-8")
         time.sleep(PAUSE)

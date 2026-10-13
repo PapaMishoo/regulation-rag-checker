@@ -83,9 +83,9 @@ def expand_context(results, all_chunks):
         expanded.append(({"label": label, "text": " ".join(c["text"] for c in parts)}, best[label]))
     return expanded
 
-def answer_question(question, embedder, chunks, embeddings, use_rewrite=True):
+def answer_question(question, embedder, chunks, embeddings, use_rewrite=True, save_rewrite=True):
     if use_rewrite:
-        rewritten = get_rewrite(question)
+        rewritten = get_rewrite(question, save=save_rewrite)
         # the refusal cutoff still uses the ORIGINAL question's score
         results, top_score = search_with_rewrite(question, rewritten, embedder, chunks, embeddings, TOP_K)
     else:
