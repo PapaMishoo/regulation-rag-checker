@@ -37,38 +37,38 @@ STATUS = {
 }
 
 CSS = """<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
-html, body, .stApp, [class*="css"] {font-family: Inter, system-ui, sans-serif;}
-.stApp {background: radial-gradient(900px 520px at 10% -6%, rgba(129,140,248,.22), transparent 60%), radial-gradient(800px 480px at 96% 6%, rgba(94,234,212,.15), transparent 60%), #060914;}
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+html, body, .stApp, [class*="css"] {font-family: "IBM Plex Sans", system-ui, sans-serif;}
+.stApp {background: #15130f; color: #f0e9d8;}
 #MainMenu, footer, header {visibility: hidden;}
-.block-container {max-width: 1100px; padding-top: 2.2rem; padding-bottom: 4rem;}
-.eyebrow {display:inline-block; font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#5eead4; padding:8px 14px; border:1px solid rgba(94,234,212,.35); border-radius:999px; background:rgba(94,234,212,.07);}
-.hero-title {font-size:clamp(34px,5vw,60px); font-weight:800; letter-spacing:-.03em; line-height:1.05; margin:16px 0 10px;}
-.grad {background:linear-gradient(95deg,#5eead4,#818cf8 55%,#f472b6); -webkit-background-clip:text; background-clip:text; color:transparent;}
-.lede {color:#b9c3d8; font-size:17px; max-width:840px; margin-bottom:18px;}
-.sec {color:#9aa6bd; font-size:14.5px; margin:4px 0 14px;}
-.trace {display:grid; grid-template-columns:repeat(6,1fr); gap:10px; margin:14px 0 18px;}
-.tstep {padding:12px; border-radius:14px; border:1px solid rgba(255,255,255,.09); background:rgba(255,255,255,.04); font-size:12px; color:#9aa6bd; line-height:1.35;}
-.tstep b {display:block; color:#e8ecf5; font-size:13px; margin:7px 0 3px;}
-.tn {width:22px; height:22px; border-radius:50%; display:grid; place-items:center; font:700 11px "JetBrains Mono",monospace; background:#334155; color:#fff;}
-.tstep.ok {border-color:rgba(94,234,212,.4);}
-.tstep.ok .tn {background:linear-gradient(135deg,#5eead4,#818cf8); color:#06101c;}
-.tstep.stop {border-color:rgba(251,191,36,.5); background:rgba(251,191,36,.06);}
-.tstep.stop .tn {background:#fbbf24; color:#06101c;}
-.tstep.skip {opacity:.5;}
-.card {padding:16px 20px; border-radius:16px; border:1px solid rgba(255,255,255,.09); background:rgba(255,255,255,.045); margin-bottom:12px;}
-.card .rk {font:700 12px "JetBrains Mono",monospace; color:#818cf8;}
-.card h4 {margin:4px 0 4px; font-size:16px; font-weight:700; color:#e8ecf5;}
-.bar {height:6px; border-radius:99px; background:rgba(255,255,255,.07); overflow:hidden; margin:8px 0;}
-.bar i {display:block; height:100%; background:linear-gradient(90deg,#818cf8,#5eead4);}
-.snip {color:#aab4c9; font-size:13.5px;}
-.pill {display:inline-block; padding:4px 11px; border-radius:99px; font-size:12px; font-weight:600; border:1px solid; margin:2px 6px 2px 0;}
-.pill.ok {color:#34d399; border-color:rgba(52,211,153,.45); background:rgba(52,211,153,.09);}
-.pill.stop {color:#fbbf24; border-color:rgba(251,191,36,.5); background:rgba(251,191,36,.08);}
-.pill.muted {color:#cbd5e1; border-color:rgba(203,213,225,.3);}
-.q {font-size:21px; font-weight:700; margin:6px 0 2px; letter-spacing:-.01em;}
-.answer {padding:18px 20px; border-radius:16px; border-left:4px solid #818cf8; background:rgba(129,140,248,.09); font-size:15.5px; color:#e8ecf5; margin:10px 0 12px;}
-.small {color:#8b96ad; font-size:12.5px;}
+.block-container {max-width: 1100px; padding-top: 2.2rem; padding-bottom: 4rem; border-top: 6px double #f0e9d8; margin-top: 1.2rem;}
+.eyebrow {display:inline-block; font:500 12px "IBM Plex Mono",monospace; letter-spacing:.14em; text-transform:uppercase; color:#e8643f; padding:0 0 9px; border-bottom:1px solid #e8643f;}
+.hero-title {font:800 clamp(38px,6vw,68px)/1 Fraunces,Georgia,serif; letter-spacing:-.03em; margin:20px 0 12px; color:#f0e9d8;}
+.grad {font-style:italic; font-weight:600; color:#e8643f;}
+.lede {color:#cfc7b3; font-size:17.5px; max-width:840px; margin-bottom:18px;}
+.sec {color:#cfc7b3; font-size:15px; margin:4px 0 14px;}
+.trace {display:grid; grid-template-columns:repeat(6,1fr); border:1px solid #3a3629; background:#1e1b15; margin:14px 0 18px;}
+.tstep {padding:12px; border-right:1px solid #3a3629; font-size:12.5px; color:#a39c88; line-height:1.4;}
+.tstep:last-child {border-right:0;}
+.tstep b {display:block; color:#f0e9d8; font:600 14.5px Fraunces,Georgia,serif; margin:8px 0 3px;}
+.tn {width:22px; height:22px; border:1.5px solid #f0e9d8; border-radius:50%; display:grid; place-items:center; font:600 11px "IBM Plex Mono",monospace; color:#f0e9d8;}
+.tstep.ok .tn {background:#7bc99a; border-color:#7bc99a; color:#15130f;}
+.tstep.stop {background:rgba(232,100,63,.12);}
+.tstep.stop .tn {background:#e8643f; border-color:#e8643f; color:#15130f;}
+.tstep.skip {opacity:.55;}
+.card {padding:16px 20px; border:1px solid #3a3629; border-left:4px solid #8db4dd; background:#1e1b15; margin-bottom:12px;}
+.card .rk {font:600 12px "IBM Plex Mono",monospace; color:#e8643f;}
+.card h4 {margin:4px 0 4px; font:600 18px Fraunces,Georgia,serif; color:#f0e9d8;}
+.bar {height:6px; background:#2a261e; margin:8px 0;}
+.bar i {display:block; height:100%; background:#8db4dd;}
+.snip {color:#cfc7b3; font-size:14px;}
+.pill {display:inline-block; padding:3px 9px; border-radius:2px; font:500 12px "IBM Plex Mono",monospace; border:1px solid; margin:2px 6px 2px 0; letter-spacing:.02em;}
+.pill.ok {color:#7bc99a; border-color:#7bc99a; background:rgba(123,201,154,.12);}
+.pill.stop {color:#e3b04b; border-color:#e3b04b; background:rgba(227,176,75,.12);}
+.pill.muted {color:#a39c88; border-color:#6d6757;}
+.q {font:600 24px/1.25 Fraunces,Georgia,serif; margin:8px 0 2px; letter-spacing:-.01em; color:#f0e9d8;}
+.answer {padding:18px 22px; border-left:4px solid #e8643f; background:#1e1b15; font:500 17px/1.55 Fraunces,Georgia,serif; color:#f0e9d8; margin:10px 0 12px;}
+.small {color:#a39c88; font-size:13px;}
 @media (max-width:900px) {.trace {grid-template-columns:repeat(2,1fr);}}
 </style>"""
 
