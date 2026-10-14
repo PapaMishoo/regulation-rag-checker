@@ -1,6 +1,6 @@
 # Devlog
 
-## Day 1: Project setup
+Project setup
 
 **What I did:** Installed Git and Python 3.13, created the GitHub repo, copied it to my PC, and set up the project folders (data, src, eval, docs). Then downloaded the EU AI Act and GDPR from EUR-Lex as PDFs and saved them in the data folder, with a sources note.
 
