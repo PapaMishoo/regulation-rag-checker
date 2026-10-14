@@ -56,7 +56,7 @@ h2{font:600 32px/1.15 var(--serif);letter-spacing:-.015em}
 .seg button:last-child{border-right:0}
 .seg button.on{background:var(--ink);color:var(--bg)}
 .row{display:grid;grid-template-columns:minmax(230px,310px) 1fr 64px 52px 92px;gap:14px;align-items:center;padding:11px 10px;border-bottom:1px solid var(--line)}
-.row.adopted{background:rgba(232,100,63,.10);border-left:4px solid var(--pink)}
+.row.adopted{background:rgba(232,100,63,.10);box-shadow:inset 4px 0 0 var(--pink)}
 .rn b{font:600 15px var(--serif)}
 .rn small{display:block;color:var(--muted);font-size:12.5px}
 .idx{display:inline-grid;place-items:center;min-width:22px;height:22px;border:1px solid var(--muted);font:500 11px var(--mono);margin-right:8px;color:var(--muted)}
@@ -256,7 +256,7 @@ function renderJourney() {
     let d = "";
     if (prev !== null) {
       const diff = v - prev, txt = metric === "mrr" ? diff.toFixed(2) : Math.round(diff * 100) + "";
-      const cls = Math.abs(diff) < 0.005 ? "" : diff > 0 ? "pos" : "neg";
+      const cls = Math.abs(diff) < 0.025 ? "" : diff > 0 ? "pos" : "neg";
       d = `<span class="delta ${cls}">${diff > 0.0049 ? "+" : ""}${txt}</span>`;
     }
     const val = metric === "mrr" ? v.toFixed(2) : pct(v);
