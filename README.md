@@ -4,6 +4,8 @@ Ask a question about the **GDPR** or the **EU AI Act** in plain English. The sys
 
 This repository is as much about **measuring** the system as building it: a hand-written test set, ten measured retrieval experiments (including the ones that failed), a fresh test I hadn't tuned on, and twenty attacks on my own system.
 
+**Live report:** https://papamishoo.github.io/regulation-rag-checker/report/
+
 > **What it is, and isn't.** A retrieval-augmented generation (RAG) system built from pretrained models. An embedding model finds the right article, a hosted language model writes the answer from the retrieved text, and my own code decides when to refuse and checks every citation. I did not train a model. It is informational only, **not legal advice**, and not an official EU service.
 
 ![Report overview](docs/images/report-hero.png)
